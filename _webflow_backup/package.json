@@ -1,0 +1,19 @@
+{
+  "name": "reels-social-agency",
+  "version": "1.0.0",
+  "description": "Full clone of Reels - Creative Social Media & UGC Agency (https://reels-wbs.webflow.io/)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "reels",
+    "ugc",
+    "creator-marketing",
+    "social-agency",
+    "webflow-clone"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,232 @@
+/* Ensure Webflow elements with data-show and animations are always visible in React */
+[data="show"],
+[scroll-item="show"],
+.marquee-item,
+.right-marquee-item,
+.hero-reels-item,
+.hero-creator-card,
+.service-card,
+.step-blur,
+[avatar-list="move"],
+.step-item,
+.testimonial-card,
+.pricing-card {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Boldonse', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafc;
+  color: #111111;
+  overflow-x: hidden;
+}
+
+/* Video cover & responsive helpers */
+video[data-object-fit="cover"] {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==========================================================================
+   Hero Floating Social Badges
+   ========================================================================== */
+.hero-caption {
+  position: relative;
+}
+
+@keyframes floatBadge1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(3deg);
+  }
+}
+
+@keyframes floatBadge2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(3deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(-2deg);
+  }
+}
+
+@keyframes floatBadge3 {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+  }
+}
+
+@keyframes floatBadge4 {
+  0%, 100% {
+    transform: translateY(0px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-3deg);
+  }
+}
+
+.floating-social-badge {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  z-index: 15;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.floating-social-badge:hover {
+  transform: scale(1.12) translateY(-4px) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+.floating-social-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.floating-social-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.floating-social-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.floating-social-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.floating-social-stat {
+  font-size: 11px;
+  font-weight: 600;
+  color: #10b981;
+}
+
+/* Specific Badge Positions & Animations */
+.badge-instagram {
+  top: 14%;
+  left: -24px;
+  animation: floatBadge1 4.5s ease-in-out infinite;
+}
+
+.badge-tiktok,
+.badge-linkedin {
+  top: 10%;
+  right: -28px;
+  animation: floatBadge2 4s ease-in-out infinite 0.5s;
+}
+
+.badge-youtube {
+  bottom: 22%;
+  left: -18px;
+  animation: floatBadge3 4.8s ease-in-out infinite 1s;
+}
+
+.badge-snapchat {
+  bottom: 24%;
+  right: -20px;
+  animation: floatBadge4 4.2s ease-in-out infinite 0.8s;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1150px) {
+  .badge-instagram {
+    left: 2%;
+    top: 6%;
+  }
+  .badge-tiktok,
+  .badge-linkedin {
+    right: 2%;
+    top: 6%;
+  }
+  .badge-youtube {
+    left: 4%;
+    bottom: 12%;
+  }
+  .badge-snapchat {
+    right: 4%;
+    bottom: 12%;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .floating-social-badge {
+    padding: 6px 12px;
+    gap: 7px;
+  }
+  .floating-social-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .floating-social-stat {
+    display: none;
+  }
+  .badge-instagram {
+    left: 0;
+    top: -10px;
+  }
+  .badge-tiktok,
+  .badge-linkedin {
+    right: 0;
+    top: -10px;
+  }
+  .badge-youtube,
+  .badge-snapchat {
+    display: none;
+  }
+}
+
