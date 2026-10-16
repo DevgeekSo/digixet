@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { TrendingUp, Award, Zap, BarChart3, ArrowUpRight } from 'lucide-react';
-import styles from './ResultsMetrics.module.css';
+import React from "react";
+import { TrendingUp, Award, Zap, BarChart3, ArrowUpRight } from "lucide-react";
+import styles from "./ResultsMetrics.module.css";
 
 export default function ResultsMetrics() {
   const metrics = [
-    { label: 'Average ROAS Lift', value: '+340%', icon: TrendingUp },
-    { label: 'Higher Conversion Rate', value: '4.8x', icon: Zap },
-    { label: 'Watch-Through Rate', value: '+180%', icon: BarChart3 },
-    { label: 'Direct Revenue Generated', value: '$14M+', icon: Award },
+    { label: "Average ROAS Lift", value: "+340%", icon: TrendingUp },
+    { label: "Higher Conversion Rate", value: "4.8x", icon: Zap },
+    { label: "Watch-Through Rate", value: "+180%", icon: BarChart3 },
+    { label: "Direct Revenue Generated", value: "$14M+", icon: Award },
   ];
 
   return (
@@ -22,7 +22,8 @@ export default function ResultsMetrics() {
           </div>
           <h2 className={styles.heading}>RESULTS THAT SPEAK FOR THEMSELVES</h2>
           <p className={styles.subtext}>
-            We don’t chase vanity likes. Every creative brief and hook variation is engineered for high-intent purchases.
+            We don’t chase vanity likes. Every creative brief and hook variation
+            is engineered for high-intent purchases.
           </p>
         </div>
 
@@ -30,9 +31,13 @@ export default function ResultsMetrics() {
         <div className={styles.spotlightCard}>
           <div className={styles.spotlightContent}>
             <span className={styles.caseBadge}>FEATURED CASE STUDY</span>
-            <h3 className={styles.caseTitle}>Duskline Apparel: From $45k/mo to $210k/mo with UGC</h3>
+            <h3 className={styles.caseTitle}>
+              Duskline Apparel: From $45k/mo to $210k/mo with UGC
+            </h3>
             <p className={styles.caseDesc}>
-              By replacing polished studio ads with raw, authentic creator try-ons and emotional hook testing, we scaled Duskline's blended ROAS to 4.2x while cutting CAC by 44%.
+              By replacing polished studio ads with raw, authentic creator
+              try-ons and emotional hook testing, we scaled Duskline's blended
+              ROAS to 4.2x while cutting CAC by 44%.
             </p>
 
             <div className={styles.caseStats}>

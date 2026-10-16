@@ -1,68 +1,70 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Check, Sparkles, ArrowRight } from 'lucide-react';
-import styles from './Pricing.module.css';
+import React, { useState } from "react";
+import Link from "next/link";
+import { Check, Sparkles, ArrowRight } from "lucide-react";
+import styles from "./Pricing.module.css";
 
 export default function Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'quarterly'>('monthly');
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">(
+    "monthly",
+  );
 
   const plans = [
     {
-      name: 'Starter Plan',
-      tag: 'Validation',
-      desc: 'For brands just getting started with authentic UGC creative.',
-      monthlyPrice: '$1,999',
-      quarterlyPrice: '$1,699',
+      name: "Starter Plan",
+      tag: "Validation",
+      desc: "For brands just getting started with authentic UGC creative.",
+      monthlyPrice: "$1,999",
+      quarterlyPrice: "$1,699",
       popular: false,
       features: [
-        '4 Vetted Creators per month',
-        '8 Final Polished UGC Videos',
-        '16 Hook & CTA Variations',
-        'Raw Footage Included',
-        'Full Digital Ad Usage Rights',
-        '10-Day Delivery Guarantee',
+        "4 Vetted Creators per month",
+        "8 Final Polished UGC Videos",
+        "16 Hook & CTA Variations",
+        "Raw Footage Included",
+        "Full Digital Ad Usage Rights",
+        "10-Day Delivery Guarantee",
       ],
-      ctaText: 'Get Started',
+      ctaText: "Get Started",
     },
     {
-      name: 'Growth Plan',
-      tag: 'Most Popular',
-      desc: 'For scaling brands needing a steady stream of fresh ad creative.',
-      monthlyPrice: '$3,999',
-      quarterlyPrice: '$3,399',
+      name: "Growth Plan",
+      tag: "Most Popular",
+      desc: "For scaling brands needing a steady stream of fresh ad creative.",
+      monthlyPrice: "$3,999",
+      quarterlyPrice: "$3,399",
       popular: true,
       features: [
-        '8 Vetted Creators per month',
-        '16 Final Polished UGC Videos',
-        '32 Hook & Angle Variations',
-        'Bi-weekly Creative Strategy Calls',
-        'Competitor Ad Angle Teardowns',
-        'Whitelisting / Spark Ads Setup',
-        '7-Day Delivery Guarantee',
-        'Dedicated Creative Strategist',
+        "8 Vetted Creators per month",
+        "16 Final Polished UGC Videos",
+        "32 Hook & Angle Variations",
+        "Bi-weekly Creative Strategy Calls",
+        "Competitor Ad Angle Teardowns",
+        "Whitelisting / Spark Ads Setup",
+        "7-Day Delivery Guarantee",
+        "Dedicated Creative Strategist",
       ],
-      ctaText: 'Scale With Growth',
+      ctaText: "Scale With Growth",
     },
     {
-      name: 'Agency Plan',
-      tag: 'Full-Service',
-      desc: 'Complete end-to-end creator department for 7-figure brands.',
-      monthlyPrice: '$6,999',
-      quarterlyPrice: '$5,999',
+      name: "Agency Plan",
+      tag: "Full-Service",
+      desc: "Complete end-to-end creator department for 7-figure brands.",
+      monthlyPrice: "$6,999",
+      quarterlyPrice: "$5,999",
       popular: false,
       features: [
-        '16+ Vetted Creators per month',
-        '32 Final Polished UGC Videos',
-        '64 Hook Variations for Meta & TikTok',
-        'Daily Organic Account Posting & Repurposing',
-        'Multi-angle Scriptwriting & Storyboards',
-        'Full Whitelisting & Creator Spark Access',
-        'Priority 24/7 Slack Channel',
-        'Custom Monthly Reporting Dashboard',
+        "16+ Vetted Creators per month",
+        "32 Final Polished UGC Videos",
+        "64 Hook Variations for Meta & TikTok",
+        "Daily Organic Account Posting & Repurposing",
+        "Multi-angle Scriptwriting & Storyboards",
+        "Full Whitelisting & Creator Spark Access",
+        "Priority 24/7 Slack Channel",
+        "Custom Monthly Reporting Dashboard",
       ],
-      ctaText: 'Book Agency Call',
+      ctaText: "Book Agency Call",
     },
   ];
 
@@ -82,14 +84,14 @@ export default function Pricing() {
           {/* Toggle */}
           <div className={styles.toggleWrap}>
             <button
-              className={`${styles.toggleBtn} ${billingCycle === 'monthly' ? styles.toggleActive : ''}`}
-              onClick={() => setBillingCycle('monthly')}
+              className={`${styles.toggleBtn} ${billingCycle === "monthly" ? styles.toggleActive : ""}`}
+              onClick={() => setBillingCycle("monthly")}
             >
               Monthly
             </button>
             <button
-              className={`${styles.toggleBtn} ${billingCycle === 'quarterly' ? styles.toggleActive : ''}`}
-              onClick={() => setBillingCycle('quarterly')}
+              className={`${styles.toggleBtn} ${billingCycle === "quarterly" ? styles.toggleActive : ""}`}
+              onClick={() => setBillingCycle("quarterly")}
             >
               Quarterly <span className={styles.saveTag}>Save 15%</span>
             </button>
@@ -98,7 +100,10 @@ export default function Pricing() {
 
         <div className={styles.grid}>
           {plans.map((p, i) => (
-            <div key={i} className={`${styles.card} ${p.popular ? styles.popularCard : ''}`}>
+            <div
+              key={i}
+              className={`${styles.card} ${p.popular ? styles.popularCard : ""}`}
+            >
               {p.popular && (
                 <div className={styles.badgePopular}>
                   <Sparkles size={14} />
@@ -114,15 +119,17 @@ export default function Pricing() {
 
               <div className={styles.priceWrap}>
                 <span className={styles.price}>
-                  {billingCycle === 'monthly' ? p.monthlyPrice : p.quarterlyPrice}
+                  {billingCycle === "monthly"
+                    ? p.monthlyPrice
+                    : p.quarterlyPrice}
                 </span>
                 <span className={styles.period}>/ month</span>
               </div>
 
               <Link
                 href="#contact"
-                className={p.popular ? 'btn-primary' : 'btn-secondary'}
-                style={{ width: '100%', marginBottom: '28px' }}
+                className={p.popular ? "btn-primary" : "btn-secondary"}
+                style={{ width: "100%", marginBottom: "28px" }}
               >
                 <span>{p.ctaText}</span>
                 <ArrowRight size={16} />

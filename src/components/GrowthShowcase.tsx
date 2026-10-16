@@ -1,10 +1,295 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 export default function GrowthShowcase() {
   return (
-    <section data-scroll="load" className="section-spacing-bottom"><div className="container-medium"><div className="counter-content"><div className="w-layout-grid grid-counter"><div scroll-item="show" className="counter-left"><div className="counter-left-item"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0701aadf310ee6a5cecb5a_counter.avif" loading="lazy" alt="Image
-" className="counter-image"/><div className="counter-overlay"></div></div><div className="counter-left-info"><h2 className="text-white no-margin-bottom">Real growth. Real brands. Real results.</h2></div></div><div scroll-item="show" className="counter-right"><div scroll-item="show" className="counter-info"><div className="align-center"><div data-wf--pre-title--variant="light" className="pre-title w-variant-78cfc61f-22b8-dae6-a49f-77874c0c6eaa">By the numbers</div></div><div className="counter-caption"><h2 className="counter-count">1,200<span className="text-primary-5">+</span></h2><p className="counter-description">Videos delivered briefed, reviewed, approved.</p></div></div><div scroll-item="show" className="counter-list"><div className="w-layout-grid grid-counter-item"><h3 className="counter-item-title">120<span className="text-primary-6">+</span></h3><p className="no-margin-bottom">Brands Served Every niche. Every platform.</p></div><div className="w-layout-grid grid-counter-item"><h3 className="counter-item-title">4.8<span className="text-primary-3">x</span></h3><p className="no-margin-bottom">Average ROAS Lift Nearly 5x return on ad spend.</p></div><div className="w-layout-grid grid-counter-item no-border"><h3 className="counter-item-title">80<span className="text-primary-4">m+</span></h3><p className="no-margin-bottom">Total Views Generated Organic. Zero ad spend.</p></div></div></div></div><div scroll-item="show" className="counter-marquee"><div className="marquee-list counter-marquee-list"><div className="marquee-item counter-marquee-item"><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070f26e1c8113a23041ce9_counter-item01.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Performance-matched creators</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe08b519a832d864576_counter-item02.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Weekly performance reports</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe067d5f5c5c7485fb8_counter-item03.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">You approve every video</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe0910b34bd7d8f610d_counter-item04.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">First content in 7 days</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe05d50683a5d7d0e48_counter-item05.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Unlimited revisions</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe253f1c5651a5ca970_counter-item06.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Hook testing included</div></div></div><div className="marquee-item counter-marquee-item"><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070f26e1c8113a23041ce9_counter-item01.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Performance-matched creators</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe08b519a832d864576_counter-item02.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Weekly performance reports</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe067d5f5c5c7485fb8_counter-item03.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">You approve every video</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe0910b34bd7d8f610d_counter-item04.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">First content in 7 days</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe05d50683a5d7d0e48_counter-item05.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Unlimited revisions</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe253f1c5651a5ca970_counter-item06.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Hook testing included</div></div></div><div className="marquee-item counter-marquee-item"><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070f26e1c8113a23041ce9_counter-item01.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Performance-matched creators</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe08b519a832d864576_counter-item02.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Weekly performance reports</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe067d5f5c5c7485fb8_counter-item03.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">You approve every video</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe0910b34bd7d8f610d_counter-item04.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">First content in 7 days</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe05d50683a5d7d0e48_counter-item05.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Unlimited revisions</div></div><div className="counter-item"><div className="counter-item-round"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe253f1c5651a5ca970_counter-item06.svg" alt="Counter Icon" className="counter-item-icon"/></div><div className="text-gray-1">Hook testing included</div></div></div></div><div className="counter-fade"></div><div className="counter-fade right"></div></div></div></div></section>
+    <section data-scroll="load" className="section-spacing-bottom">
+      <div className="container-medium">
+        <div className="counter-content">
+          <div className="w-layout-grid grid-counter">
+            <div scroll-item="show" className="counter-left">
+              <div className="counter-left-item">
+                <img
+                  src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0701aadf310ee6a5cecb5a_counter.avif"
+                  loading="lazy"
+                  alt="Image
+"
+                  className="counter-image"
+                />
+                <div className="counter-overlay"></div>
+              </div>
+              <div className="counter-left-info">
+                <h2 className="text-white no-margin-bottom">
+                  Real growth. Real brands. Real results.
+                </h2>
+              </div>
+            </div>
+            <div scroll-item="show" className="counter-right">
+              <div scroll-item="show" className="counter-info">
+                <div className="align-center">
+                  <div
+                    data-wf--pre-title--variant="light"
+                    className="pre-title w-variant-78cfc61f-22b8-dae6-a49f-77874c0c6eaa"
+                  >
+                    By the numbers
+                  </div>
+                </div>
+                <div className="counter-caption">
+                  <h2 className="counter-count">
+                    1,200<span className="text-primary-5">+</span>
+                  </h2>
+                  <p className="counter-description">
+                    Videos delivered briefed, reviewed, approved.
+                  </p>
+                </div>
+              </div>
+              <div scroll-item="show" className="counter-list">
+                <div className="w-layout-grid grid-counter-item">
+                  <h3 className="counter-item-title">
+                    120<span className="text-primary-6">+</span>
+                  </h3>
+                  <p className="no-margin-bottom">
+                    Brands Served Every niche. Every platform.
+                  </p>
+                </div>
+                <div className="w-layout-grid grid-counter-item">
+                  <h3 className="counter-item-title">
+                    4.8<span className="text-primary-3">x</span>
+                  </h3>
+                  <p className="no-margin-bottom">
+                    Average ROAS Lift Nearly 5x return on ad spend.
+                  </p>
+                </div>
+                <div className="w-layout-grid grid-counter-item no-border">
+                  <h3 className="counter-item-title">
+                    80<span className="text-primary-4">m+</span>
+                  </h3>
+                  <p className="no-margin-bottom">
+                    Total Views Generated Organic. Zero ad spend.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div scroll-item="show" className="counter-marquee">
+            <div className="marquee-list counter-marquee-list">
+              <div className="marquee-item counter-marquee-item">
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070f26e1c8113a23041ce9_counter-item01.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">
+                    Performance-matched creators
+                  </div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe08b519a832d864576_counter-item02.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">Weekly performance reports</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe067d5f5c5c7485fb8_counter-item03.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">You approve every video</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe0910b34bd7d8f610d_counter-item04.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">First content in 7 days</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe05d50683a5d7d0e48_counter-item05.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">Unlimited revisions</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe253f1c5651a5ca970_counter-item06.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">Hook testing included</div>
+                </div>
+              </div>
+              <div className="marquee-item counter-marquee-item">
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070f26e1c8113a23041ce9_counter-item01.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">
+                    Performance-matched creators
+                  </div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe08b519a832d864576_counter-item02.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">Weekly performance reports</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe067d5f5c5c7485fb8_counter-item03.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">You approve every video</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe0910b34bd7d8f610d_counter-item04.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">First content in 7 days</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe05d50683a5d7d0e48_counter-item05.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">Unlimited revisions</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe253f1c5651a5ca970_counter-item06.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">Hook testing included</div>
+                </div>
+              </div>
+              <div className="marquee-item counter-marquee-item">
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070f26e1c8113a23041ce9_counter-item01.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">
+                    Performance-matched creators
+                  </div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe08b519a832d864576_counter-item02.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">Weekly performance reports</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe067d5f5c5c7485fb8_counter-item03.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">You approve every video</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe0910b34bd7d8f610d_counter-item04.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">First content in 7 days</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe05d50683a5d7d0e48_counter-item05.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">Unlimited revisions</div>
+                </div>
+                <div className="counter-item">
+                  <div className="counter-item-round">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a070fe253f1c5651a5ca970_counter-item06.svg"
+                      alt="Counter Icon"
+                      className="counter-item-icon"
+                    />
+                  </div>
+                  <div className="text-gray-1">Hook testing included</div>
+                </div>
+              </div>
+            </div>
+            <div className="counter-fade"></div>
+            <div className="counter-fade right"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

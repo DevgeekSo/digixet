@@ -15,17 +15,26 @@ function htmlToJsx(html) {
   // Replace tabindex= with tabIndex=
   jsx = jsx.replace(/\btabindex="/g, 'tabIndex="');
 
-  // Replace maxlength= with maxLength=
-  jsx = jsx.replace(/\bmaxlength="/g, 'maxLength="');
-
-  // Replace crossorigin= with crossOrigin=
-  jsx = jsx.replace(/\bcrossorigin=/gi, 'crossOrigin=');
+  // Replace maxlength= with maxLength={number}
+  jsx = jsx.replace(/\bmaxlength="(\d+)"/gi, 'maxLength={$1}');
+  jsx = jsx.replace(/\bmaxLength="(\d+)"/g, 'maxLength={$1}');
+  jsx = jsx.replace(/\btabindex="(-?\d+)"/gi, 'tabIndex={$1}');
+  jsx = jsx.replace(/\btabIndex="(-?\d+)"/g, 'tabIndex={$1}');
+  jsx = jsx.replace(/\brows="(\d+)"/gi, 'rows={$1}');
+  jsx = jsx.replace(/\bcols="(\d+)"/gi, 'cols={$1}');
 
   // Replace boolean video attributes
   jsx = jsx.replace(/\bplaysinline(?=[>\s="])/gi, 'playsInline');
   jsx = jsx.replace(/\bautoplay(?=[>\s="])/gi, 'autoPlay');
   
-  // Clean up style="..."
+  // Clean boolean attributes that have empty strings
+  jsx = jsx.replace(/\bautoPlay=""/g, 'autoPlay');
+  jsx = jsx.replace(/\bloop=""/g, 'loop');
+  jsx = jsx.replace(/\bmuted=""/g, 'muted');
+  jsx = jsx.replace(/\bplaysInline=""/g, 'playsInline');
+  jsx = jsx.replace(/\b(hidden|disabled|required|readonly|checked|selected)=""/gi, '$1');
+  jsx = jsx.replace(/\bdata-autoPlay=/g, 'data-autoplay=');
+  jsx = jsx.replace(/\bdata-playsInline=/g, 'data-playsinline=');
   jsx = jsx.replace(/style="([^"]*)"/g, (match, styleContent) => {
     // If it's just background-image on video, skip it
     if (styleContent.includes('background-image:url(&quot;')) {

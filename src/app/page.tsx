@@ -1,17 +1,17 @@
-import React from 'react';
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-import IntroBanner from '@/components/IntroBanner';
-import MarketingAssetSection from '@/components/MarketingAssetSection';
-import ServiceCardsSection from '@/components/ServiceCardsSection';
-import ResultsShowSection from '@/components/ResultsShowSection';
-import CompareSection from '@/components/CompareSection';
-import StepSection from '@/components/StepSection';
-import GrowthShowcase from '@/components/GrowthShowcase';
-import TestimonialPhoneSection from '@/components/TestimonialPhoneSection';
-import PricingSection from '@/components/PricingSection';
-import CtaBottomSection from '@/components/CtaBottomSection';
-import FooterSection from '@/components/FooterSection';
+import React from "react";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import IntroBanner from "@/components/IntroBanner";
+import MarketingAssetSection from "@/components/MarketingAssetSection";
+import ServiceCardsSection from "@/components/ServiceCardsSection";
+import ResultsShowSection from "@/components/ResultsShowSection";
+import CompareSection from "@/components/CompareSection";
+import StepSection from "@/components/StepSection";
+import GrowthShowcase from "@/components/GrowthShowcase";
+import TestimonialPhoneSection from "@/components/TestimonialPhoneSection";
+import PricingSection from "@/components/PricingSection";
+import CtaBottomSection from "@/components/CtaBottomSection";
+import FooterSection from "@/components/FooterSection";
 
 export default function HomePage() {
   return (

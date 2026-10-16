@@ -1,51 +1,55 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { ArrowUpRight, TrendingUp, Sparkles, Video, Users } from 'lucide-react';
-import styles from './ServiceCards.module.css';
+import React from "react";
+import { ArrowUpRight, TrendingUp, Sparkles, Video, Users } from "lucide-react";
+import styles from "./ServiceCards.module.css";
 
 export default function ServiceCards() {
   const services = [
     {
-      id: '01',
-      tag: 'Creative Strategy',
-      title: 'UGC that stops the scroll',
-      desc: 'Hook-driven, authentic creator content engineered for high retention and algorithm virality.',
-      stat: '100+ Brands Scaled',
+      id: "01",
+      tag: "Creative Strategy",
+      title: "UGC that stops the scroll",
+      desc: "Hook-driven, authentic creator content engineered for high retention and algorithm virality.",
+      stat: "100+ Brands Scaled",
       colorClass: styles.cardBlue,
       icon: Video,
-      img: '/digixet-logo.png',
-      previewImg: 'https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcabeecfdc9128035299_avatar15.jpg',
+      img: "/digixet-logo.png",
+      previewImg:
+        "https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcabeecfdc9128035299_avatar15.jpg",
     },
     {
-      id: '02',
-      tag: 'Paid Performance',
-      title: 'High-converting UGC ads',
-      desc: 'Performance ad variations and direct-response angles tested systematically to slash your customer acquisition cost.',
-      stat: '+340% Avg. ROAS Lift',
+      id: "02",
+      tag: "Paid Performance",
+      title: "High-converting UGC ads",
+      desc: "Performance ad variations and direct-response angles tested systematically to slash your customer acquisition cost.",
+      stat: "+340% Avg. ROAS Lift",
       colorClass: styles.cardPink,
       icon: TrendingUp,
-      previewImg: 'https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fb1155356dd26395f2_2.avif',
+      previewImg:
+        "https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fb1155356dd26395f2_2.avif",
     },
     {
-      id: '03',
-      tag: 'Organic Distribution',
-      title: 'TikTok & Reels organic growth',
-      desc: 'Consistent daily storytelling and sound-trending formats that transform casual scrollers into loyal customers.',
-      stat: '50M+ Organic Views',
+      id: "03",
+      tag: "Organic Distribution",
+      title: "TikTok & Reels organic growth",
+      desc: "Consistent daily storytelling and sound-trending formats that transform casual scrollers into loyal customers.",
+      stat: "50M+ Organic Views",
       colorClass: styles.cardGreen,
       icon: Sparkles,
-      previewImg: 'https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fcc3e1aad9593aaadc_8.avif',
+      previewImg:
+        "https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fcc3e1aad9593aaadc_8.avif",
     },
     {
-      id: '04',
-      tag: 'Talent Network',
-      title: 'Creator sourcing & management',
-      desc: 'Complete talent matching, contracts, creative briefs, and content QA handled end-to-end for zero brand headache.',
-      stat: '1250+ Vetted Creators',
+      id: "04",
+      tag: "Talent Network",
+      title: "Creator sourcing & management",
+      desc: "Complete talent matching, contracts, creative briefs, and content QA handled end-to-end for zero brand headache.",
+      stat: "1250+ Vetted Creators",
       colorClass: styles.cardYellow,
       icon: Users,
-      previewImg: 'https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fce6e659e05f5a34a2_7.jpg',
+      previewImg:
+        "https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fce6e659e05f5a34a2_7.jpg",
     },
   ];
 
@@ -59,7 +63,8 @@ export default function ServiceCards() {
           </div>
           <h2 className={styles.heading}>HOW WE GROW YOU</h2>
           <p className={styles.subtext}>
-            We combine high-level creative direction with data-backed creator marketing systems.
+            We combine high-level creative direction with data-backed creator
+            marketing systems.
           </p>
         </div>
 
@@ -87,7 +92,11 @@ export default function ServiceCards() {
                   </div>
 
                   <div className={styles.previewBox}>
-                    <img src={s.previewImg} alt={s.title} className={styles.previewAvatar} />
+                    <img
+                      src={s.previewImg}
+                      alt={s.title}
+                      className={styles.previewAvatar}
+                    />
                     <span className={styles.badgeNum}>{s.id}</span>
                   </div>
                 </div>

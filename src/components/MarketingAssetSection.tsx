@@ -1,9 +1,139 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 export default function MarketingAssetSection() {
   return (
-    <section data-scroll="load" className="section-spacing-bottom"><div className="container-medium"><div className="w-layout-grid grid-mission"><div scroll-item="show" className="mission-left"><div className="mission-item"><div data-poster-url="https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a11322c6704e9bc494241f5_about_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a11322c6704e9bc494241f5_about_mp4.mp4,https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a11322c6704e9bc494241f5_about_webm.webm" data-autoPlay="true" data-loop="true" data-wf-ignore="true" className="mission-video w-background-video w-background-video-atom"><video id="30fa21fb-6023-73cd-e3ba-0ffcc0e945bc-video" autoPlay loop  muted playsInline data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a11322c6704e9bc494241f5_about_mp4.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a11322c6704e9bc494241f5_about_webm.webm" data-wf-ignore="true"/></video><div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="30fa21fb-6023-73cd-e3ba-0ffcc0e945bc-video" className="w-backgroundvideo-backgroundvideoplaypausebutton mission-button w-background-video--control"><span className="play-state"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b9c150c692f82209d74b_pause.svg" loading="lazy" alt="Pause video" className="play-state-icon"/></span><span hidden className="paush-state"><img loading="lazy" alt="Play video" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b9c20f31d4858c99aee2_play.svg" className="paush-state-icon"/></span></button></div></div></div><div className="mission-item right"><div className="mission-badge light _02"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b80f8ef7fe763e1c9ed5_chat.svg" loading="lazy" alt="Icon" className="mission-badge-icon"/><div className="mission-badge-title dark">82+</div></div><div className="mission-badge white _03"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b82184651f29de2cfec8_eye.svg" loading="lazy" alt="Icon" className="mission-badge-icon"/><div className="mission-badge-title dark">18.8M</div></div><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a104b69d54ca4c5df6839a9_4.avif" loading="lazy" alt="Image" className="mission-left-image"/></div><div className="mission-badge"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b659ca1f7edb46c2e2c3_heart.svg" loading="lazy" alt="Icon" className="mission-badge-icon"/><div className="mission-badge-title">12M</div></div></div><div className="mission-right"><div className="mission-content"><div scroll-item="show" className="pre-left"><div data-wf--pre-title--variant="base" className="pre-title">Our mission</div></div><div scroll-item="show" className="mission-info"><h2 className="mission-title">We make real people your best marketing asset.</h2><p className="no-margin-bottom">UGC grounded in performance data. We find the right creators, test the right hooks, and build content that earns attention and actually converts it into revenue.</p></div><div scroll-item="show" className="left-item"><a button="hover" data-wf--button-arrow--variant="base-button" href="/about" className="button-arrow w-inline-block"><div className="button-icon-round"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a02f8131485834ac5de15a5_button-arrow.svg" loading="eager" alt="Arrow Icon" className="button-icon"/></div><div className="button-text-wrap"><div text-1="move" className="button-text">See how we do it</div><div text-2="move" className="button-hover-text">See how we do it</div></div></a></div></div></div></div></div></section>
+    <section data-scroll="load" className="section-spacing-bottom">
+      <div className="container-medium">
+        <div className="w-layout-grid grid-mission">
+          <div scroll-item="show" className="mission-left">
+            <div className="mission-item">
+              <div className="mission-video w-background-video w-background-video-atom">
+                <video
+                  id="30fa21fb-6023-73cd-e3ba-0ffcc0e945bc-video"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  data-wf-ignore="true"
+                  data-object-fit="cover"
+                >
+                  <source
+                    src="/sample/sample-4.mp4"
+                    type="video/mp4"
+                    data-wf-ignore="true"
+                  />
+                </video>
+                <div aria-live="polite">
+                  <button
+                    type="button"
+                    data-w-bg-video-control="true"
+                    aria-controls="30fa21fb-6023-73cd-e3ba-0ffcc0e945bc-video"
+                    className="w-backgroundvideo-backgroundvideoplaypausebutton mission-button w-background-video--control"
+                  >
+                    <span className="play-state">
+                      <img
+                        src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b9c150c692f82209d74b_pause.svg"
+                        loading="lazy"
+                        alt="Pause video"
+                        className="play-state-icon"
+                      />
+                    </span>
+                    <span hidden className="paush-state">
+                      <img
+                        loading="lazy"
+                        alt="Play video"
+                        src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b9c20f31d4858c99aee2_play.svg"
+                        className="paush-state-icon"
+                      />
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="mission-item right">
+              <div className="mission-badge light _02">
+                <img
+                  src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b80f8ef7fe763e1c9ed5_chat.svg"
+                  loading="lazy"
+                  alt="Icon"
+                  className="mission-badge-icon"
+                />
+                <div className="mission-badge-title dark">82+</div>
+              </div>
+              <div className="mission-badge white _03">
+                <img
+                  src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b82184651f29de2cfec8_eye.svg"
+                  loading="lazy"
+                  alt="Icon"
+                  className="mission-badge-icon"
+                />
+                <div className="mission-badge-title dark">18.8M</div>
+              </div>
+              <img
+                src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a104b69d54ca4c5df6839a9_4.avif"
+                loading="lazy"
+                alt="Image"
+                className="mission-left-image"
+              />
+            </div>
+            <div className="mission-badge">
+              <img
+                src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b659ca1f7edb46c2e2c3_heart.svg"
+                loading="lazy"
+                alt="Icon"
+                className="mission-badge-icon"
+              />
+              <div className="mission-badge-title">12M</div>
+            </div>
+          </div>
+          <div className="mission-right">
+            <div className="mission-content">
+              <div scroll-item="show" className="pre-left">
+                <div data-wf--pre-title--variant="base" className="pre-title">
+                  Our mission
+                </div>
+              </div>
+              <div scroll-item="show" className="mission-info">
+                <h2 className="mission-title">
+                  We make real people your best marketing asset.
+                </h2>
+                <p className="no-margin-bottom">
+                  UGC grounded in performance data. We find the right creators,
+                  test the right hooks, and build content that earns attention
+                  and actually converts it into revenue.
+                </p>
+              </div>
+              <div scroll-item="show" className="left-item">
+                <a
+                  button="hover"
+                  data-wf--button-arrow--variant="base-button"
+                  href="/about"
+                  className="button-arrow w-inline-block"
+                >
+                  <div className="button-icon-round">
+                    <img
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a02f8131485834ac5de15a5_button-arrow.svg"
+                      loading="eager"
+                      alt="Arrow Icon"
+                      className="button-icon"
+                    />
+                  </div>
+                  <div className="button-text-wrap">
+                    <div text-1="move" className="button-text">
+                      See how we do it
+                    </div>
+                    <div text-2="move" className="button-hover-text">
+                      See how we do it
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

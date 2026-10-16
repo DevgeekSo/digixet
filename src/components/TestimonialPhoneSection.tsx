@@ -1,9 +1,841 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 export default function TestimonialPhoneSection() {
   return (
-    <section data-scroll="load" className="testimonial-section"><div className="container"><div className="section-title"><div className="testimonial-caption"><div className="testimonial-section-title"><div scroll-item="show" className="align-center"><div data-wf--pre-title--variant="base" className="pre-title">Testimonials</div></div><h2 scroll-item="show" className="text-center no-margin-bottom">Brands that chose real over perfect.</h2></div><div scroll-item="show" className="testimonial-rating-info"><div className="testimonial-avatar-list"><div className="testimonial-avatar-round left-0"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcab9f239d293149025b_avatar12.jpg" loading="lazy" alt="Avatar Image" className="testimonial-avatar"/></div><div className="testimonial-avatar-round"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcab3ac42ea35a74f45c_avatar13.jpg" loading="lazy" alt="Avatar Image" className="testimonial-avatar"/></div><div className="testimonial-avatar-round"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcab36e3334e8979592c_avatar14.jpg" loading="lazy" alt="Avatar Image" className="testimonial-avatar"/></div><div className="testimonial-avatar-round"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcabeecfdc9128035299_avatar15.jpg" loading="lazy" alt="Avatar Image" className="testimonial-avatar"/></div></div><div className="testimonial-rating"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" loading="lazy" alt="Star Icon" className="testimonial-rating-icon"/><p className="text-black no-margin-bottom"><span className="text-bold">4.9/5</span> from 120+ brands</p></div></div></div></div><div scroll-item="show" className="testimonial-content"><div className="testimonial-marquee-info"><div className="testimonial-marquee-list"><div className="marquee-item testimonial-marquee-item"><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">We tried two agencies before this and got nothing but polished content and excuses. Real results within 60 days.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08063fff14c38bc994bbbf_avatar21.jpg" alt="Avatar " className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Sara Kim</div><div className="text-small">CMO, Oralyn Skincare</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Our engagement tripled and our ad costs dropped. Turns out when content looks real, people actually click.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0806d61216d16bb14dbb48_CTA-10.jpg" alt="Avatar Image" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">James Adler</div><div className="text-small">Founder, Duskline</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">I finally know what&#x27;s working and why. The weekly reports alone are worth the investment, and they help me make smarter.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080717dcc86926c3b56c31_avatar20.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Raya Lev</div><div className="text-small">Head of Growth, Mintwave</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Within 30 days we had more content than we&#x27;d made in a full year, and it was better content. The results exceeded our expectations</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fb1155356dd26395f2_2.avif" alt="Avatar Image" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Tom Nakamura</div><div className="text-small">CEO, Velour Co.</div></div></div></div></div><div className="marquee-item testimonial-marquee-item"><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">We tried two agencies before this and got nothing but polished content and excuses. Real results within 60 days.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08063fff14c38bc994bbbf_avatar21.jpg" alt="Avatar " className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Sara Kim</div><div className="text-small">CMO, Oralyn Skincare</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Our engagement tripled and our ad costs dropped. Turns out when content looks real, people actually click.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0806d61216d16bb14dbb48_CTA-10.jpg" alt="Avatar Image" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">James Adler</div><div className="text-small">Founder, Duskline</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">I finally know what&#x27;s working and why. The weekly reports alone are worth the investment, and they help me make smarter.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080717dcc86926c3b56c31_avatar20.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Raya Lev</div><div className="text-small">Head of Growth, Mintwave</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Within 30 days we had more content than we&#x27;d made in a full year, and it was better content. The results exceeded our expectations</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fb1155356dd26395f2_2.avif" alt="Avatar Image" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Tom Nakamura</div><div className="text-small">CEO, Velour Co.</div></div></div></div></div><div className="marquee-item testimonial-marquee-item"><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">We tried two agencies before this and got nothing but polished content and excuses. Real results within 60 days.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08063fff14c38bc994bbbf_avatar21.jpg" alt="Avatar " className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Sara Kim</div><div className="text-small">CMO, Oralyn Skincare</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Our engagement tripled and our ad costs dropped. Turns out when content looks real, people actually click.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0806d61216d16bb14dbb48_CTA-10.jpg" alt="Avatar Image" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">James Adler</div><div className="text-small">Founder, Duskline</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">I finally know what&#x27;s working and why. The weekly reports alone are worth the investment, and they help me make smarter.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080717dcc86926c3b56c31_avatar20.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Raya Lev</div><div className="text-small">Head of Growth, Mintwave</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Within 30 days we had more content than we&#x27;d made in a full year, and it was better content. The results exceeded our expectations</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fb1155356dd26395f2_2.avif" alt="Avatar Image" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Tom Nakamura</div><div className="text-small">CEO, Velour Co.</div></div></div></div></div><div className="testimonial-fade"></div><div className="testimonial-fade right"></div></div><div className="testimonial-marquee-list right"><div className="right-marquee-item"><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Digixet gave us a real strategy, real creators, and real results within 60 days, helping us grow faster with measurable impact.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080857dc5aa082d97ec910_avatar22.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Ethan Brooks</div><div className="text-small">Wellness, Oralyn Skincare</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">The creator they matched us with had 12K followers but drove more sales than our previous influencer with 800K.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808a5b75517cf37746011_avatar19.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Ben Walsh</div><div className="text-small">Director, Nuvora</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">With Digixet, we saw structured strategy, quality creators, and strong results within two months.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808d9e0eca343db2c8a8b_avatar18.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Noah Parker</div><div className="text-small">Brand Strategist, Mintwave</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Social media used to feel like shouting into a void. Now we have a system that consistently brings in qualified leads.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08090546e3fb9a039d4705_avatar17.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Alicia Moreno</div><div className="text-small">Marketing Lead, Krestfield</div></div></div></div></div><div className="right-marquee-item"><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Digixet gave us a real strategy, real creators, and real results within 60 days, helping us grow faster with measurable impact.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080857dc5aa082d97ec910_avatar22.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Ethan Brooks</div><div className="text-small">Wellness, Oralyn Skincare</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">The creator they matched us with had 12K followers but drove more sales than our previous influencer with 800K.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808a5b75517cf37746011_avatar19.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Ben Walsh</div><div className="text-small">Director, Nuvora</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">With Digixet, we saw structured strategy, quality creators, and strong results within two months.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808d9e0eca343db2c8a8b_avatar18.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Noah Parker</div><div className="text-small">Brand Strategist, Mintwave</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Social media used to feel like shouting into a void. Now we have a system that consistently brings in qualified leads.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08090546e3fb9a039d4705_avatar17.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Alicia Moreno</div><div className="text-small">Marketing Lead, Krestfield</div></div></div></div></div><div className="right-marquee-item"><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Digixet gave us a real strategy, real creators, and real results within 60 days, helping us grow faster with measurable impact.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080857dc5aa082d97ec910_avatar22.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Ethan Brooks</div><div className="text-small">Wellness, Oralyn Skincare</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">The creator they matched us with had 12K followers but drove more sales than our previous influencer with 800K.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808a5b75517cf37746011_avatar19.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Ben Walsh</div><div className="text-small">Director, Nuvora</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">With Digixet, we saw structured strategy, quality creators, and strong results within two months.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808d9e0eca343db2c8a8b_avatar18.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Noah Parker</div><div className="text-small">Brand Strategist, Mintwave</div></div></div></div><div className="testimonial-card"><div className="testimonial-review-item"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg" alt="Star Icon" className="testimonial-review-icon"/><p className="no-margin-bottom">Social media used to feel like shouting into a void. Now we have a system that consistently brings in qualified leads.</p></div><div className="testimonial-avatar-info"><img loading="lazy" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08090546e3fb9a039d4705_avatar17.jpg" alt="Avatar" className="testimonial-avatar sm"/><div className="testimonial-client-info"><div className="testimonial-client-name">Alicia Moreno</div><div className="text-small">Marketing Lead, Krestfield</div></div></div></div></div><div className="testimonial-fade"></div><div className="testimonial-fade right"></div></div></div><div className="testimonial-mobile-content"><div className="testimonial-mobile-reels"><div className="testimonial-tab-pane"><div data-poster-url="https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a152bebfb101ce2caa3d7f1_reel-01%20resize%29_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a152bebfb101ce2caa3d7f1_reel-01%20resize%29_mp4.mp4,https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a152bebfb101ce2caa3d7f1_reel-01%20resize%29_webm.webm" data-autoPlay="true" data-loop="true" data-wf-ignore="true" className="testimonial-video w-background-video w-background-video-atom"><video id="7af4b9fc-a844-62d9-8bb4-6cc7e145fdc8-video" autoPlay loop  muted playsInline data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a152bebfb101ce2caa3d7f1_reel-01%20resize%29_mp4.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405%2F6a152bebfb101ce2caa3d7f1_reel-01%20resize%29_webm.webm" data-wf-ignore="true"/></video><div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="7af4b9fc-a844-62d9-8bb4-6cc7e145fdc8-video" className="w-backgroundvideo-backgroundvideoplaypausebutton testimonial-button w-background-video--control"><span className="play-state"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b9c150c692f82209d74b_pause.svg" loading="lazy" alt="Pause video" className="play-state-icon"/></span><span hidden className="paush-state"><img loading="lazy" alt="Play video" src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b9c20f31d4858c99aee2_play.svg" className="paush-state-icon"/></span></button></div></div><div className="reels-badge-item _01"><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a04108de09d4a92c3a1ced6_1.avif" loading="lazy" alt="Avatar Image" className="reels-badge-avatar"/><div className="reels-avatar-info"><div className="reels-avatar-name">mila.creates</div><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0411c1e2e21903ddb04cae_VERIFIED.svg" loading="lazy" alt="Verified Icon" className="reels-badge-icon"/></div></div></div></div><img src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080b18eff35a942b6a8b71_3.avif" loading="lazy" alt="Image" className="testimonial-image"/><div className="testimonial-overlay"></div></div></div></div></section>
+    <section data-scroll="load" className="testimonial-section">
+      <div className="container">
+        <div className="section-title">
+          <div className="testimonial-caption">
+            <div className="testimonial-section-title">
+              <div scroll-item="show" className="align-center">
+                <div data-wf--pre-title--variant="base" className="pre-title">
+                  Testimonials
+                </div>
+              </div>
+              <h2 scroll-item="show" className="text-center no-margin-bottom">
+                Brands that chose real over perfect.
+              </h2>
+            </div>
+            <div scroll-item="show" className="testimonial-rating-info">
+              <div className="testimonial-avatar-list">
+                <div className="testimonial-avatar-round left-0">
+                  <img
+                    src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcab9f239d293149025b_avatar12.jpg"
+                    loading="lazy"
+                    alt="Avatar Image"
+                    className="testimonial-avatar"
+                  />
+                </div>
+                <div className="testimonial-avatar-round">
+                  <img
+                    src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcab3ac42ea35a74f45c_avatar13.jpg"
+                    loading="lazy"
+                    alt="Avatar Image"
+                    className="testimonial-avatar"
+                  />
+                </div>
+                <div className="testimonial-avatar-round">
+                  <img
+                    src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcab36e3334e8979592c_avatar14.jpg"
+                    loading="lazy"
+                    alt="Avatar Image"
+                    className="testimonial-avatar"
+                  />
+                </div>
+                <div className="testimonial-avatar-round">
+                  <img
+                    src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fcabeecfdc9128035299_avatar15.jpg"
+                    loading="lazy"
+                    alt="Avatar Image"
+                    className="testimonial-avatar"
+                  />
+                </div>
+              </div>
+              <div className="testimonial-rating">
+                <img
+                  src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                  loading="lazy"
+                  alt="Star Icon"
+                  className="testimonial-rating-icon"
+                />
+                <p className="text-black no-margin-bottom">
+                  <span className="text-bold">4.9/5</span> from 120+ brands
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div scroll-item="show" className="testimonial-content">
+          <div className="testimonial-marquee-info">
+            <div className="testimonial-marquee-list">
+              <div className="marquee-item testimonial-marquee-item">
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      We tried two agencies before this and got nothing but
+                      polished content and excuses. Real results within 60 days.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08063fff14c38bc994bbbf_avatar21.jpg"
+                      alt="Avatar "
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Sara Kim</div>
+                      <div className="text-small">CMO, Oralyn Skincare</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Our engagement tripled and our ad costs dropped. Turns out
+                      when content looks real, people actually click.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0806d61216d16bb14dbb48_CTA-10.jpg"
+                      alt="Avatar Image"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">James Adler</div>
+                      <div className="text-small">Founder, Duskline</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      I finally know what&#x27;s working and why. The weekly
+                      reports alone are worth the investment, and they help me
+                      make smarter.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080717dcc86926c3b56c31_avatar20.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Raya Lev</div>
+                      <div className="text-small">Head of Growth, Mintwave</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Within 30 days we had more content than we&#x27;d made in
+                      a full year, and it was better content. The results
+                      exceeded our expectations
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fb1155356dd26395f2_2.avif"
+                      alt="Avatar Image"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">
+                        Tom Nakamura
+                      </div>
+                      <div className="text-small">CEO, Velour Co.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="marquee-item testimonial-marquee-item">
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      We tried two agencies before this and got nothing but
+                      polished content and excuses. Real results within 60 days.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08063fff14c38bc994bbbf_avatar21.jpg"
+                      alt="Avatar "
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Sara Kim</div>
+                      <div className="text-small">CMO, Oralyn Skincare</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Our engagement tripled and our ad costs dropped. Turns out
+                      when content looks real, people actually click.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0806d61216d16bb14dbb48_CTA-10.jpg"
+                      alt="Avatar Image"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">James Adler</div>
+                      <div className="text-small">Founder, Duskline</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      I finally know what&#x27;s working and why. The weekly
+                      reports alone are worth the investment, and they help me
+                      make smarter.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080717dcc86926c3b56c31_avatar20.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Raya Lev</div>
+                      <div className="text-small">Head of Growth, Mintwave</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Within 30 days we had more content than we&#x27;d made in
+                      a full year, and it was better content. The results
+                      exceeded our expectations
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fb1155356dd26395f2_2.avif"
+                      alt="Avatar Image"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">
+                        Tom Nakamura
+                      </div>
+                      <div className="text-small">CEO, Velour Co.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="marquee-item testimonial-marquee-item">
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      We tried two agencies before this and got nothing but
+                      polished content and excuses. Real results within 60 days.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08063fff14c38bc994bbbf_avatar21.jpg"
+                      alt="Avatar "
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Sara Kim</div>
+                      <div className="text-small">CMO, Oralyn Skincare</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Our engagement tripled and our ad costs dropped. Turns out
+                      when content looks real, people actually click.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0806d61216d16bb14dbb48_CTA-10.jpg"
+                      alt="Avatar Image"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">James Adler</div>
+                      <div className="text-small">Founder, Duskline</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      I finally know what&#x27;s working and why. The weekly
+                      reports alone are worth the investment, and they help me
+                      make smarter.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080717dcc86926c3b56c31_avatar20.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Raya Lev</div>
+                      <div className="text-small">Head of Growth, Mintwave</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Within 30 days we had more content than we&#x27;d made in
+                      a full year, and it was better content. The results
+                      exceeded our expectations
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0418fb1155356dd26395f2_2.avif"
+                      alt="Avatar Image"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">
+                        Tom Nakamura
+                      </div>
+                      <div className="text-small">CEO, Velour Co.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="testimonial-fade"></div>
+              <div className="testimonial-fade right"></div>
+            </div>
+            <div className="testimonial-marquee-list right">
+              <div className="right-marquee-item">
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Digixet gave us a real strategy, real creators, and real
+                      results within 60 days, helping us grow faster with
+                      measurable impact.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080857dc5aa082d97ec910_avatar22.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">
+                        Ethan Brooks
+                      </div>
+                      <div className="text-small">
+                        Wellness, Oralyn Skincare
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      The creator they matched us with had 12K followers but
+                      drove more sales than our previous influencer with 800K.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808a5b75517cf37746011_avatar19.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Ben Walsh</div>
+                      <div className="text-small">Director, Nuvora</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      With Digixet, we saw structured strategy, quality
+                      creators, and strong results within two months.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808d9e0eca343db2c8a8b_avatar18.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Noah Parker</div>
+                      <div className="text-small">
+                        Brand Strategist, Mintwave
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Social media used to feel like shouting into a void. Now
+                      we have a system that consistently brings in qualified
+                      leads.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08090546e3fb9a039d4705_avatar17.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">
+                        Alicia Moreno
+                      </div>
+                      <div className="text-small">
+                        Marketing Lead, Krestfield
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="right-marquee-item">
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Digixet gave us a real strategy, real creators, and real
+                      results within 60 days, helping us grow faster with
+                      measurable impact.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080857dc5aa082d97ec910_avatar22.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">
+                        Ethan Brooks
+                      </div>
+                      <div className="text-small">
+                        Wellness, Oralyn Skincare
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      The creator they matched us with had 12K followers but
+                      drove more sales than our previous influencer with 800K.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808a5b75517cf37746011_avatar19.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Ben Walsh</div>
+                      <div className="text-small">Director, Nuvora</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      With Digixet, we saw structured strategy, quality
+                      creators, and strong results within two months.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808d9e0eca343db2c8a8b_avatar18.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Noah Parker</div>
+                      <div className="text-small">
+                        Brand Strategist, Mintwave
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Social media used to feel like shouting into a void. Now
+                      we have a system that consistently brings in qualified
+                      leads.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08090546e3fb9a039d4705_avatar17.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">
+                        Alicia Moreno
+                      </div>
+                      <div className="text-small">
+                        Marketing Lead, Krestfield
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="right-marquee-item">
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Digixet gave us a real strategy, real creators, and real
+                      results within 60 days, helping us grow faster with
+                      measurable impact.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080857dc5aa082d97ec910_avatar22.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">
+                        Ethan Brooks
+                      </div>
+                      <div className="text-small">
+                        Wellness, Oralyn Skincare
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      The creator they matched us with had 12K followers but
+                      drove more sales than our previous influencer with 800K.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808a5b75517cf37746011_avatar19.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Ben Walsh</div>
+                      <div className="text-small">Director, Nuvora</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      With Digixet, we saw structured strategy, quality
+                      creators, and strong results within two months.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0808d9e0eca343db2c8a8b_avatar18.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">Noah Parker</div>
+                      <div className="text-small">
+                        Brand Strategist, Mintwave
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="testimonial-review-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a07fd85ee9a1acfee23e8f5_star.svg"
+                      alt="Star Icon"
+                      className="testimonial-review-icon"
+                    />
+                    <p className="no-margin-bottom">
+                      Social media used to feel like shouting into a void. Now
+                      we have a system that consistently brings in qualified
+                      leads.
+                    </p>
+                  </div>
+                  <div className="testimonial-avatar-info">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a08090546e3fb9a039d4705_avatar17.jpg"
+                      alt="Avatar"
+                      className="testimonial-avatar sm"
+                    />
+                    <div className="testimonial-client-info">
+                      <div className="testimonial-client-name">
+                        Alicia Moreno
+                      </div>
+                      <div className="text-small">
+                        Marketing Lead, Krestfield
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="testimonial-fade"></div>
+              <div className="testimonial-fade right"></div>
+            </div>
+          </div>
+          <div className="testimonial-mobile-content">
+            <div className="testimonial-mobile-reels">
+              <div className="testimonial-tab-pane">
+                <div className="testimonial-video w-background-video w-background-video-atom">
+                  <video
+                    id="7af4b9fc-a844-62d9-8bb4-6cc7e145fdc8-video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    data-wf-ignore="true"
+                    data-object-fit="cover"
+                  >
+                    <source
+                      src="/sample/sample-5.mp4"
+                      type="video/mp4"
+                      data-wf-ignore="true"
+                    />
+                  </video>
+                  <div aria-live="polite">
+                    <button
+                      type="button"
+                      data-w-bg-video-control="true"
+                      aria-controls="7af4b9fc-a844-62d9-8bb4-6cc7e145fdc8-video"
+                      className="w-backgroundvideo-backgroundvideoplaypausebutton testimonial-button w-background-video--control"
+                    >
+                      <span className="play-state">
+                        <img
+                          src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b9c150c692f82209d74b_pause.svg"
+                          loading="lazy"
+                          alt="Pause video"
+                          className="play-state-icon"
+                        />
+                      </span>
+                      <span hidden className="paush-state">
+                        <img
+                          loading="lazy"
+                          alt="Play video"
+                          src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a05b9c20f31d4858c99aee2_play.svg"
+                          className="paush-state-icon"
+                        />
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div className="reels-badge-item _01">
+                  <img
+                    src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a04108de09d4a92c3a1ced6_1.avif"
+                    loading="lazy"
+                    alt="Avatar Image"
+                    className="reels-badge-avatar"
+                  />
+                  <div className="reels-avatar-info">
+                    <div className="reels-avatar-name">mila.creates</div>
+                    <img
+                      src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a0411c1e2e21903ddb04cae_VERIFIED.svg"
+                      loading="lazy"
+                      alt="Verified Icon"
+                      className="reels-badge-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a080b18eff35a942b6a8b71_3.avif"
+              loading="lazy"
+              alt="Image"
+              className="testimonial-image"
+            />
+            <div className="testimonial-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

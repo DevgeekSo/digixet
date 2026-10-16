@@ -1,18 +1,264 @@
-/* Ensure Webflow elements with data-show and animations are always visible in React */
-[data="show"],
-[scroll-item="show"],
+/* Ensure non-animatable Webflow marquee elements are always visible */
 .marquee-item,
 .right-marquee-item,
-.hero-reels-item,
-.hero-creator-card,
-.service-card,
-.step-blur,
-[avatar-list="move"],
-.step-item,
-.testimonial-card,
-.pricing-card {
+.marquee-list,
+.marquee-badge,
+[avatar-list="move"] {
   visibility: visible !important;
   opacity: 1 !important;
+}
+
+/* ==========================================================================
+   Continuous Marquee & Orbit Animations (Webflow Replicas)
+   ========================================================================== */
+.marquee-item,
+.right-marquee-item {
+  flex-shrink: 0 !important;
+  will-change: transform;
+}
+
+/* 1. Testimonial Review Cards Marquee (Behind Phone Reel) */
+.testimonial-marquee-list:not(.right) .marquee-item {
+  animation: testimonialScrollLeft 45s linear infinite !important;
+}
+
+.testimonial-marquee-list.right .right-marquee-item {
+  animation: testimonialScrollRight 45s linear infinite !important;
+}
+
+@keyframes testimonialScrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-100% - var(--gap--gap-9, 24px)), 0, 0);
+  }
+}
+
+@keyframes testimonialScrollRight {
+  0% {
+    transform: translate3d(calc(-100% - var(--gap--gap-9, 24px)), 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* 2. Counter & Pricing Marquees */
+.counter-marquee-list .marquee-item {
+  animation: counterScrollLeft 32s linear infinite !important;
+}
+
+@keyframes counterScrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-100% - var(--gap--gap-8, 20px)), 0, 0);
+  }
+}
+
+.pricing-platform-content .marquee-item {
+  animation: pricingScrollLeft 35s linear infinite !important;
+}
+
+@keyframes pricingScrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-100% - var(--gap--gap-5, 16px)), 0, 0);
+  }
+}
+
+/* 3. CTA Orbiting Creator Photos Wheel (Behind "SCROLLING HAPPENS") */
+[avatar-list="move"],
+.cta-avatar-list {
+  animation: ctaAvatarOrbit 90s linear infinite !important;
+  transform-origin: center center !important;
+  will-change: transform;
+}
+
+@keyframes ctaAvatarOrbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-marquee-list .marquee-item,
+  .testimonial-marquee-list.right .right-marquee-item,
+  .counter-marquee-list .marquee-item,
+  .pricing-platform-content .marquee-item,
+  [avatar-list="move"],
+  .cta-avatar-list {
+    animation: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   Lenis Smooth Scrolling
+   ========================================================================== */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Reels Webflow Signature Scroll Reveal (Bottom-to-Top)
+   ========================================================================== */
+[scroll-item="show"],
+[data="show"] {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* When in view: glide smoothly up into final position */
+[data-scroll="load"].is-inview [scroll-item="show"],
+[scroll-item="show"].is-inview,
+[data="show"].is-inview {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+/* ==========================================================================
+   Reels Webflow Signature Rolling Button Hover Animations
+   ========================================================================== */
+.button-text-wrap,
+.button-primary-title,
+.button-title-wrap,
+.button-title-rolling {
+  position: relative !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  height: 22px !important;
+  line-height: 22px !important;
+  vertical-align: middle !important;
+}
+
+[text-1="move"],
+[text-2="move"] {
+  display: block !important;
+  line-height: 22px !important;
+  height: 22px !important;
+  white-space: nowrap !important;
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform;
+}
+
+/* Hover: text-1 slides up and out, text-2 slides up into place */
+[button="hover"]:hover [text-1="move"],
+.button-arrow:hover [text-1="move"],
+.button-primary:hover [text-1="move"],
+.button-right:hover [text-1="move"],
+a.button-arrow:hover [text-1="move"],
+a.button-primary:hover [text-1="move"],
+a.button-right:hover [text-1="move"] {
+  transform: translateY(-100%) !important;
+}
+
+[button="hover"]:hover [text-2="move"],
+.button-arrow:hover [text-2="move"],
+.button-primary:hover [text-2="move"],
+.button-right:hover [text-2="move"],
+a.button-arrow:hover [text-2="move"],
+a.button-primary:hover [text-2="move"],
+a.button-right:hover [text-2="move"] {
+  transform: translateY(-100%) !important;
+}
+
+/* Button icon rotate on hover */
+.button-icon,
+.button-right-icon {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+[button="hover"]:hover .button-icon,
+.button-arrow:hover .button-icon,
+.button-right:hover .button-right-icon {
+  transform: rotate(45deg) scale(1.1) !important;
+}
+
+/* ==========================================================================
+   Card Hover Elevation & 3D Interactive Effects
+   ========================================================================== */
+.pricing-card,
+.step-card,
+.core-value-card,
+.testimonial-card,
+.service-card,
+.about-card,
+.team-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.pricing-card:hover,
+.step-card:hover,
+.core-value-card:hover,
+.team-card:hover,
+.about-card:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.12) !important;
+}
+
+/* Image zoom on hover for CMS and blog cards */
+[image="hover"],
+.blog-image,
+.case-image {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+[cms-item="hover"]:hover [image="hover"],
+.blog-card:hover .blog-image,
+.case-card-left:hover .case-image {
+  transform: scale(1.06) !important;
+}
+
+/* Team card social list reveal on hover */
+.team-social-list {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s ease !important;
+}
+.team-card:hover .team-social-list {
+  transform: translateY(0);
+  opacity: 1 !important;
+}
+
+/* ==========================================================================
+   Hero Floating Badges Bobbing Animation
+   ========================================================================== */
+.floating-social-badge {
+  animation: heroBadgeFloat 4.2s ease-in-out infinite alternate !important;
+}
+.badge-instagram { animation-delay: 0s !important; }
+.badge-linkedin { animation-delay: 0.9s !important; }
+.badge-youtube { animation-delay: 1.8s !important; }
+.badge-snapchat { animation-delay: 2.7s !important; }
+
+@keyframes heroBadgeFloat {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-9px); }
 }
 
 /* Base resets & typography */
@@ -20,6 +266,7 @@ html {
   scroll-behavior: smooth;
   font-family: 'Boldonse', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 body {
@@ -27,8 +274,9 @@ body {
   padding: 0;
   background-color: #fafafc;
   color: #111111;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
+
 
 /* Video cover & responsive helpers */
 video[data-object-fit="cover"] {
@@ -50,6 +298,56 @@ video[data-object-fit="cover"] {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+
+/* ==========================================================================
+   Hero Section Dynamic Video Background
+   ========================================================================== */
+.hero-section {
+  position: relative !important;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.hero-video-banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-video-banner-element {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  min-width: 1280px;
+  max-width: 1920px;
+  height: 100%;
+  max-height: 980px;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.9;
+  filter: contrast(102%) brightness(101%);
+}
+
+.hero-video-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 85% 55% at 50% 25%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.35) 45%, rgba(250, 250, 252, 0.85) 75%, #fafafc 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 25%, rgba(250, 250, 252, 0.6) 65%, #fafafc 100%);
+  pointer-events: none;
+}
+
+.hero-section > .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* ==========================================================================
@@ -229,4 +527,270 @@ video[data-object-fit="cover"] {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Multi-Page Design System Styles (About, Services, Work, Pricing, FAQs, Contact)
+   ========================================================================== */
+
+.subpage-hero {
+  position: relative;
+  padding: 140px 24px 70px;
+  background: radial-gradient(circle at 50% 0%, rgba(28, 215, 96, 0.08) 0%, rgba(255, 255, 255, 0) 65%), #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  text-align: center;
+  overflow: hidden;
+}
+
+.subpage-hero-glow {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 117, 0.18) 0%, rgba(28, 215, 96, 0.05) 50%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.subpage-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.subpage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 18px;
+}
+
+.subpage-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+}
+
+.subpage-title {
+  font-size: clamp(34px, 5.5vw, 62px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  color: #0f172a;
+  max-width: 860px;
+  margin: 0 auto 18px;
+}
+
+.subpage-highlight {
+  background: linear-gradient(135deg, #0f172a 30%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subpage-subtitle {
+  font-size: clamp(16px, 2vw, 19px);
+  color: #475569;
+  max-width: 680px;
+  margin: 0 auto 32px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+/* Page Section Spacing */
+.page-section {
+  padding: 80px 24px;
+}
+
+.page-section-alt {
+  padding: 80px 24px;
+  background: #f8fafc;
+}
+
+/* Bento & Grid Cards */
+.bento-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bento-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.bento-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .bento-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .bento-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .bento-grid-3, .bento-grid-2, .bento-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bento-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.bento-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  margin-bottom: 20px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.bento-card:hover .bento-icon-wrapper {
+  background: #0f172a;
+  color: #00ff75;
+}
+
+/* Stat Counters */
+.stat-item {
+  text-align: center;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+}
+
+.stat-number {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .service-detail-card {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   How We Grow You - Service Cards Stacking & Step Cascading (Webflow Replica)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .service-sticky {
+    position: sticky !important;
+    top: 60px !important;
+    z-index: 5 !important;
+  }
+
+  .collection-list-wrapper {
+    position: sticky !important;
+    top: 90px !important;
+  }
+
+  .service-card {
+    will-change: transform, opacity;
+    transform-origin: center center;
+  }
+
+  .step-top {
+    position: sticky !important;
+    top: 0 !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .step-info {
+    pointer-events: auto !important;
+    will-change: opacity, transform;
+  }
+
+  .step-blur {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    background: rgba(250, 250, 252, 0.45) !important;
+    opacity: 0;
+    pointer-events: none !important;
+    z-index: 2 !important;
+    will-change: opacity;
+  }
+
+  .grid-step-bottom {
+    position: relative !important;
+    z-index: 3 !important;
+  }
+
+  .step-card {
+    position: sticky !important;
+    top: 240px !important;
+  }
+}
+
+
+
 
