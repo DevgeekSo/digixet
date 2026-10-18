@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function CtaBottomSection() {
   return (
@@ -137,7 +138,9 @@ export default function CtaBottomSection() {
               <a
                 button="hover"
                 data-wf--button-arrow--variant="base-button"
-                href="/contact"
+                href={getWhatsAppUrl("Hi, I want to book a free strategy call to audit our content.")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="button-arrow w-inline-block"
               >
                 <div className="button-icon-round">

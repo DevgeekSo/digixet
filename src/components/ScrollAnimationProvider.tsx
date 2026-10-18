@@ -83,6 +83,27 @@ export default function ScrollAnimationProvider() {
         }
       });
 
+      // Immediate check for all elements already in or near viewport
+      const revealInView = () => {
+        const vh = window.innerHeight;
+        document.querySelectorAll<HTMLElement>('[data="show"], [scroll-item="show"]').forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < vh + 150) {
+            el.classList.add("is-inview");
+          }
+        });
+        document.querySelectorAll<HTMLElement>('[data-scroll="load"]').forEach((sec) => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top < vh + 150) {
+            sec.classList.add("is-inview");
+            sec.querySelectorAll<HTMLElement>('[scroll-item="show"]').forEach((item) => {
+              item.classList.add("is-inview");
+            });
+          }
+        });
+      };
+      revealInView();
+
       // B. Section-level scroll triggers for [data-scroll="load"]
       const sections = Array.from(
         document.querySelectorAll<HTMLElement>('[data-scroll="load"]'),
@@ -99,7 +120,7 @@ export default function ScrollAnimationProvider() {
                 sec.querySelectorAll<HTMLElement>('[scroll-item="show"]'),
               );
               items.forEach((item, idx) => {
-                item.style.transitionDelay = `${Math.min(idx * 0.15, 0.65)}s`;
+                item.style.transitionDelay = `${Math.min(idx * 0.1, 0.4)}s`;
                 item.classList.add("is-inview");
               });
 
@@ -108,20 +129,20 @@ export default function ScrollAnimationProvider() {
           });
         },
         {
-          rootMargin: "0px 0px -10% 0px",
-          threshold: 0.08,
+          rootMargin: "80px 0px 40px 0px",
+          threshold: 0.02,
         },
       );
 
       sections.forEach((sec) => {
         const rect = sec.getBoundingClientRect();
-        if (rect.top < windowHeight * 0.75) {
+        if (rect.top < windowHeight * 0.85) {
           sec.classList.add("is-inview");
           const items = Array.from(
             sec.querySelectorAll<HTMLElement>('[scroll-item="show"]'),
           );
           items.forEach((item, idx) => {
-            item.style.transitionDelay = `${Math.min(idx * 0.12, 0.5)}s`;
+            item.style.transitionDelay = `${Math.min(idx * 0.08, 0.35)}s`;
             item.classList.add("is-inview");
           });
         } else {
@@ -147,21 +168,28 @@ export default function ScrollAnimationProvider() {
           });
         },
         {
-          rootMargin: "0px 0px -8% 0px",
-          threshold: 0.1,
+          rootMargin: "80px 0px 40px 0px",
+          threshold: 0.02,
         },
       );
 
       standaloneElements.forEach((el) => {
         if (!el.classList.contains("is-inview")) {
           const rect = el.getBoundingClientRect();
-          if (rect.top < windowHeight * 0.85) {
+          if (rect.top < windowHeight * 0.9) {
             el.classList.add("is-inview");
           } else {
             standaloneObserver.observe(el);
           }
         }
       });
+
+      // Safety fallback: reveal everything after 1.2s so content is never stuck
+      setTimeout(() => {
+        document.querySelectorAll<HTMLElement>('[data="show"], [scroll-item="show"], [data-scroll="load"]').forEach((el) => {
+          el.classList.add("is-inview");
+        });
+      }, 1200);
 
       // =========================================================================
       // D. GSAP ScrollTrigger Timelines (Webflow Signature Interactions)

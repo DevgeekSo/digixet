@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Instagram, Twitter, Youtube, Linkedin, ArrowUp } from "lucide-react";
 import styles from "./Footer.module.css";
+import { getWhatsAppUrl, WHATSAPP_PHONE_DISPLAY } from "@/lib/whatsapp";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -117,11 +118,16 @@ export default function Footer() {
             <h4 className={styles.colTitle}>Get in Touch</h4>
             <p className={styles.footerText}>hello@digixet.com</p>
             <p className={styles.footerText}>
-              Mon - Fri: 9:00 AM - 6:00 PM EST
+              WhatsApp: {WHATSAPP_PHONE_DISPLAY}
             </p>
-            <Link href="#contact" className={styles.callToAction}>
+            <a
+              href={getWhatsAppUrl("Hi, I want to book a strategy call.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.callToAction}
+            >
               Book a Strategy Call →
-            </Link>
+            </a>
           </div>
         </div>
 

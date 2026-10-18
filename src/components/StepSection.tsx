@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function StepSection() {
   return (
@@ -241,7 +242,9 @@ export default function StepSection() {
                     <a
                       button="hover"
                       data-wf--button-right--variant="base"
-                      href="/contact"
+                      href={getWhatsAppUrl("Hi, I want to book a free call to discuss creator matching.")}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="button-right w-inline-block"
                     >
                       <div className="button-title-wrap">

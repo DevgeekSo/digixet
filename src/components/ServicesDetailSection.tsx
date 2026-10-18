@@ -17,6 +17,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import styles from "./ServicesDetailSection.module.css";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 interface ServiceItem {
   id: string;
@@ -407,13 +408,15 @@ export default function ServicesDetailSection() {
                     </span>
                   </div>
 
-                  <Link
-                    href={`/contact?service=${encodeURIComponent(service.title)}`}
+                  <a
+                    href={getWhatsAppUrl(`Hi, I would like to enquire about your service: ${service.title}`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={styles.actionBtn}
                   >
                     <span>Get Started</span>
                     <ArrowUpRight size={16} className={styles.actionIcon} />
-                  </Link>
+                  </a>
                 </div>
               </div>
             );
@@ -487,10 +490,15 @@ export default function ServicesDetailSection() {
           </div>
 
           <div className={styles.ctaBox}>
-            <Link href="/contact" className={styles.primaryCta}>
+            <a
+              href={getWhatsAppUrl("Hi, I would like to book a discovery strategy call.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.primaryCta}
+            >
               <span>Book A Discovery Strategy Call</span>
               <ArrowRight size={18} />
-            </Link>
+            </a>
             <Link href="/pricing" className={styles.secondaryCta}>
               <span>View Transparent Pricing Plans</span>
             </Link>

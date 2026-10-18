@@ -210,58 +210,7 @@ export default function PortfolioVideoSection() {
             }}
           >
             See Our Portfolio.
-          </h2>
-          <p
-            className="text-center"
-            style={{
-              fontSize: "clamp(15px, 1.2vw, 18px)",
-              color: "#475569",
-              maxWidth: 620,
-              margin: "0 auto",
-              lineHeight: 1.6,
-            }}
-          >
-            Explore our curated showcase of 9 high-performing short-form UGC videos designed to capture attention in the first 3 seconds and drive real revenue.
-          </p>
-
-          {/* Category Filter Pills */}
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 10,
-              justifyContent: "center",
-              marginTop: 32,
-            }}
-          >
-            {categories.map((cat) => {
-              const isActive = activeCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  style={{
-                    border: isActive ? "1px solid #111111" : "1px solid rgba(0, 0, 0, 0.08)",
-                    backgroundColor: isActive ? "#111111" : "#ffffff",
-                    color: isActive ? "#ffffff" : "#334155",
-                    padding: "9px 18px",
-                    borderRadius: 9999,
-                    fontSize: 14,
-                    fontWeight: 600,
-                    cursor: "pointer",
-                    transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
-                    boxShadow: isActive
-                      ? "0 8px 20px rgba(0,0,0,0.12)"
-                      : "0 2px 6px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  {cat}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
+          </h2></div>
         {/* 9 Video Grid: 3 columns x 3 rows */}
         <div
           style={{

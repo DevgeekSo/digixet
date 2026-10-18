@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -69,12 +70,17 @@ export default function Navbar() {
 
           {/* Right Action */}
           <div className={styles.actions}>
-            <Link href="/contact" className={styles.ctaButton}>
+            <a
+              href={getWhatsAppUrl("Hi, I want to book a call with your team.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaButton}
+            >
               <span className={styles.ctaIcon}>
                 <Phone size={15} />
               </span>
               <span>Book a call</span>
-            </Link>
+            </a>
 
             {/* Mobile Menu Toggle Button */}
             <button
@@ -105,14 +111,16 @@ export default function Navbar() {
               ))}
             </nav>
 
-            <Link
-              href="/contact"
+            <a
+              href={getWhatsAppUrl("Hi, I want to book a call with your team.")}
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.mobileCta}
               onClick={() => setMobileMenuOpen(false)}
             >
               <Phone size={16} />
               <span>Book a call</span>
-            </Link>
+            </a>
           </div>
         )}
       </header>

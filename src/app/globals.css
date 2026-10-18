@@ -151,19 +151,24 @@ html.lenis, html.lenis body {
   overflow: hidden !important;
   display: inline-flex !important;
   flex-direction: column !important;
-  height: 22px !important;
-  line-height: 22px !important;
+  height: 24px !important;
+  line-height: 24px !important;
   vertical-align: middle !important;
 }
 
 [text-1="move"],
 [text-2="move"] {
   display: block !important;
-  line-height: 22px !important;
-  height: 22px !important;
+  line-height: 24px !important;
+  height: 24px !important;
   white-space: nowrap !important;
-  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
   will-change: transform;
+}
+
+[text-1="move"] br,
+[text-2="move"] br {
+  display: none !important;
 }
 
 /* Hover: text-1 slides up and out, text-2 slides up into place */
@@ -173,7 +178,8 @@ html.lenis, html.lenis body {
 .button-right:hover [text-1="move"],
 a.button-arrow:hover [text-1="move"],
 a.button-primary:hover [text-1="move"],
-a.button-right:hover [text-1="move"] {
+a.button-right:hover [text-1="move"],
+button.button-primary:hover [text-1="move"] {
   transform: translateY(-100%) !important;
 }
 
@@ -183,19 +189,177 @@ a.button-right:hover [text-1="move"] {
 .button-right:hover [text-2="move"],
 a.button-arrow:hover [text-2="move"],
 a.button-primary:hover [text-2="move"],
-a.button-right:hover [text-2="move"] {
+a.button-right:hover [text-2="move"],
+button.button-primary:hover [text-2="move"] {
   transform: translateY(-100%) !important;
 }
 
-/* Button icon rotate on hover */
+/* Button icon rotate & translate on hover */
 .button-icon,
-.button-right-icon {
+.button-right-icon,
+.button-arrow-icon {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 [button="hover"]:hover .button-icon,
 .button-arrow:hover .button-icon,
-.button-right:hover .button-right-icon {
+.button-right:hover .button-right-icon,
+[button="hover"]:hover .button-arrow-icon {
   transform: rotate(45deg) scale(1.1) !important;
+}
+
+/* ==========================================================================
+   Hero Authentic Webflow Reel Orientations & Magnetic Hover Spread
+   ========================================================================== */
+@media screen and (min-width: 992px) {
+  .hero-reels-item,
+  .hero-creator-card {
+    transition: transform 0.28s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.28s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+    will-change: transform;
+    transform-origin: center center;
+  }
+
+  /* Default Static Orientations from Webflow */
+  .hero-reels-item._01 {
+    transform: rotate(-5deg) !important;
+  }
+
+  .hero-reels-item._02 {
+    transform: rotate(5deg) !important;
+  }
+
+  .hero-creator-card {
+    transform: rotate(-9deg) !important;
+  }
+
+  .hero-reels-item._04 {
+    transform: rotate(5deg) !important;
+  }
+
+  /* Magnetic Card Push Spread: Hover on Card 1 (mila.creates) */
+  .hero-reels-info[data-hovered="0"] .hero-reels-item._01,
+  .hero-reels-info:has(.hero-reels-item._01:hover) .hero-reels-item._01 {
+    transform: scale(1.08) rotate(0deg) !important;
+    z-index: 12 !important;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.35) !important;
+  }
+  .hero-reels-info[data-hovered="0"] .hero-reels-item._02,
+  .hero-reels-info:has(.hero-reels-item._01:hover) .hero-reels-item._02 {
+    transform: translateX(100px) rotate(5deg) !important;
+  }
+  .hero-reels-info[data-hovered="0"] .hero-creator-card,
+  .hero-reels-info:has(.hero-reels-item._01:hover) .hero-creator-card {
+    transform: translateX(80px) rotate(-9deg) !important;
+  }
+  .hero-reels-info[data-hovered="0"] .hero-reels-item._04,
+  .hero-reels-info:has(.hero-reels-item._01:hover) .hero-reels-item._04 {
+    transform: translateX(-50px) rotate(5deg) !important;
+  }
+
+  /* Magnetic Card Push Spread: Hover on Card 2 (nikoflips) */
+  .hero-reels-info[data-hovered="1"] .hero-reels-item._01,
+  .hero-reels-info:has(.hero-reels-item._02:hover) .hero-reels-item._01 {
+    transform: translateX(-100px) rotate(-5deg) !important;
+  }
+  .hero-reels-info[data-hovered="1"] .hero-reels-item._02,
+  .hero-reels-info:has(.hero-reels-item._02:hover) .hero-reels-item._02 {
+    transform: scale(1.08) rotate(0deg) !important;
+    z-index: 12 !important;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.35) !important;
+  }
+  .hero-reels-info[data-hovered="1"] .hero-creator-card,
+  .hero-reels-info:has(.hero-reels-item._02:hover) .hero-creator-card {
+    transform: translateX(100px) rotate(-9deg) !important;
+  }
+  .hero-reels-info[data-hovered="1"] .hero-reels-item._04,
+  .hero-reels-info:has(.hero-reels-item._02:hover) .hero-reels-item._04 {
+    transform: translateX(80px) rotate(5deg) !important;
+  }
+
+  /* Magnetic Card Push Spread: Hover on Card 3 (Creators Network Card) */
+  .hero-reels-info[data-hovered="2"] .hero-reels-item._01,
+  .hero-reels-info:has(.hero-creator-card:hover) .hero-reels-item._01 {
+    transform: translateX(-80px) rotate(-5deg) !important;
+  }
+  .hero-reels-info[data-hovered="2"] .hero-reels-item._02,
+  .hero-reels-info:has(.hero-creator-card:hover) .hero-reels-item._02 {
+    transform: translateX(-100px) rotate(5deg) !important;
+  }
+  .hero-reels-info[data-hovered="2"] .hero-creator-card,
+  .hero-reels-info:has(.hero-creator-card:hover) .hero-creator-card {
+    transform: scale(1.08) rotate(0deg) !important;
+    z-index: 12 !important;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.35) !important;
+  }
+  .hero-reels-info[data-hovered="2"] .hero-reels-item._04,
+  .hero-reels-info:has(.hero-creator-card:hover) .hero-reels-item._04 {
+    transform: translateX(100px) rotate(5deg) !important;
+  }
+
+  /* Magnetic Card Push Spread: Hover on Card 4 (theolund.co / Solana) */
+  .hero-reels-info[data-hovered="3"] .hero-reels-item._01,
+  .hero-reels-info:has(.hero-reels-item._04:hover) .hero-reels-item._01 {
+    transform: translateX(-50px) rotate(-5deg) !important;
+  }
+  .hero-reels-info[data-hovered="3"] .hero-reels-item._02,
+  .hero-reels-info:has(.hero-reels-item._04:hover) .hero-reels-item._02 {
+    transform: translateX(-50px) rotate(5deg) !important;
+  }
+  .hero-reels-info[data-hovered="3"] .hero-creator-card,
+  .hero-reels-info:has(.hero-reels-item._04:hover) .hero-creator-card {
+    transform: translateX(-100px) rotate(-9deg) !important;
+  }
+  .hero-reels-info[data-hovered="3"] .hero-reels-item._04,
+  .hero-reels-info:has(.hero-reels-item._04:hover) .hero-reels-item._04 {
+    transform: scale(1.08) rotate(0deg) !important;
+    z-index: 12 !important;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.35) !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero-reels-item._01,
+  .hero-reels-item._02,
+  .hero-creator-card,
+  .hero-reels-item._04 {
+    transform: none !important;
+  }
+}
+
+/* Marquee Pause on Hover */
+.marquee-item:hover,
+.testimonial-marquee:hover,
+.pricing-marquee:hover,
+.right-marquee-item:hover {
+  animation-play-state: paused !important;
+}
+
+/* Reverse Marquee Loop */
+.right-marquee-item {
+  animation: marqueeScrollRight 40s linear infinite !important;
+  will-change: transform;
+}
+@keyframes marqueeScrollRight {
+  0% {
+    transform: translate3d(calc(-100% - 24px), 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Pricing Toggle Pill Styles */
+.pricing-toggle .toggle {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.pricing-toggle .toggle.w--current {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+  transform: scale(1.02);
+}
+.pricing-toggle .toggle:hover:not(.w--current) {
+  opacity: 0.85;
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================

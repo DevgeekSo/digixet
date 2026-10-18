@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function HeroSection() {
+  const [hoveredCard, setHoveredCard] = React.useState<number | null>(null);
   return (
     <section className="hero-section">
       {/* Dynamic Video Background Banner */}
@@ -112,7 +114,9 @@ export default function HeroSection() {
               <a
                 button="hover"
                 data-wf--button-arrow--variant="base-button"
-                href="/contact"
+                href={getWhatsAppUrl("Hi, I want to enquire about growing my brand with Digixet.")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="button-arrow w-inline-block"
               >
                 <div className="button-icon-round">
@@ -134,8 +138,16 @@ export default function HeroSection() {
               </a>
             </div>
           </div>
-          <div data="show" className="hero-reels-info">
-            <div className="hero-reels-item _01">
+          <div
+            data="show"
+            className="hero-reels-info"
+            data-hovered={hoveredCard !== null ? hoveredCard : undefined}
+          >
+            <div
+              className="hero-reels-item _01"
+              onMouseEnter={() => setHoveredCard(0)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
               <div className="hero-reels-video-item">
                 <div className="hero-reels-video w-background-video w-background-video-atom">
                   <video
@@ -201,7 +213,11 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-            <div className="hero-reels-item _02">
+            <div
+              className="hero-reels-item _02"
+              onMouseEnter={() => setHoveredCard(1)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
               <div className="hero-reels-video-item">
                 <div className="hero-reels-video w-background-video w-background-video-atom">
                   <video
@@ -267,7 +283,11 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-            <div className="hero-creator-card">
+            <div
+              className="hero-creator-card"
+              onMouseEnter={() => setHoveredCard(2)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
               <div className="hero-creator-top">
                 <div className="hero-creator-info">
                   <div className="hero-creator-list">
@@ -1277,7 +1297,11 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-            <div className="hero-reels-item _04">
+            <div
+              className="hero-reels-item _04"
+              onMouseEnter={() => setHoveredCard(3)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
               <div className="hero-reels-video-item">
                 <div className="hero-reels-video w-background-video w-background-video-atom">
                   <video

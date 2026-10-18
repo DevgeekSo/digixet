@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, Phone, Sparkles } from "lucide-react";
 import styles from "./CtaBanner.module.css";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function CtaBanner() {
   return (
@@ -41,16 +42,17 @@ export default function CtaBanner() {
             </p>
 
             <div className={styles.buttonGroup}>
-              <Link
-                href="https://calendly.com"
+              <a
+                href={getWhatsAppUrl("Hi, I want to book a 20-minute discovery strategy call.")}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary"
                 style={{ background: "#ffffff", color: "#09090b" }}
               >
                 <Phone size={16} />
                 <span>Book a Discovery Call</span>
                 <ArrowRight size={16} />
-              </Link>
+              </a>
               <Link
                 href="#pricing"
                 className="btn-secondary"

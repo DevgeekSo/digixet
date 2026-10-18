@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Check, Sparkles, ArrowRight } from "lucide-react";
 import styles from "./Pricing.module.css";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function Pricing() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">(
@@ -14,57 +15,55 @@ export default function Pricing() {
     {
       name: "Starter Plan",
       tag: "Validation",
-      desc: "For brands just getting started with authentic UGC creative.",
-      monthlyPrice: "$1,999",
-      quarterlyPrice: "$1,699",
+      desc: "Manage one social media platform and build organic reach.",
+      monthlyPrice: "₹9,999",
+      quarterlyPrice: "₹8,499",
       popular: false,
       features: [
-        "4 Vetted Creators per month",
-        "8 Final Polished UGC Videos",
-        "16 Hook & CTA Variations",
-        "Raw Footage Included",
-        "Full Digital Ad Usage Rights",
-        "10-Day Delivery Guarantee",
+        "Manage 1 social media platform",
+        "15 AI viral reels/shorts per month",
+        "15 social creative posts per month",
+        "Viral research & trend-based content creation",
+        "Monthly performance report",
+        "Engagement & reach-focused growth",
       ],
       ctaText: "Get Started",
     },
     {
       name: "Growth Plan",
       tag: "Most Popular",
-      desc: "For scaling brands needing a steady stream of fresh ad creative.",
-      monthlyPrice: "$3,999",
-      quarterlyPrice: "$3,399",
+      desc: "Manage across 3 platforms with daily posting and influencer outreach.",
+      monthlyPrice: "₹25,999",
+      quarterlyPrice: "₹21,999",
       popular: true,
       features: [
-        "8 Vetted Creators per month",
-        "16 Final Polished UGC Videos",
-        "32 Hook & Angle Variations",
-        "Bi-weekly Creative Strategy Calls",
-        "Competitor Ad Angle Teardowns",
-        "Whitelisting / Spark Ads Setup",
-        "7-Day Delivery Guarantee",
-        "Dedicated Creative Strategist",
+        "Manage across 3 platforms",
+        "30 AI viral reels/shorts per month",
+        "30 social creative posts per month",
+        "Daily posting & active engagement",
+        "Influencer marketing & collaboration",
+        "Weekly performance insights",
+        "Outreach & right audience growth",
       ],
       ctaText: "Scale With Growth",
     },
     {
-      name: "Agency Plan",
-      tag: "Full-Service",
-      desc: "Complete end-to-end creator department for 7-figure brands.",
-      monthlyPrice: "$6,999",
-      quarterlyPrice: "$5,999",
+      name: "Custom Plan",
+      tag: "Custom Package",
+      desc: "Manage multiple platforms and accounts tailored for your brand.",
+      monthlyPrice: "Custom",
+      quarterlyPrice: "Custom",
       popular: false,
       features: [
-        "16+ Vetted Creators per month",
-        "32 Final Polished UGC Videos",
-        "64 Hook Variations for Meta & TikTok",
-        "Daily Organic Account Posting & Repurposing",
-        "Multi-angle Scriptwriting & Storyboards",
-        "Full Whitelisting & Creator Spark Access",
-        "Priority 24/7 Slack Channel",
-        "Custom Monthly Reporting Dashboard",
+        "Manage multiple platforms & accounts",
+        "Customise daily number of posts",
+        "UGC videos per month",
+        "Creator & influencer marketing / collaboration",
+        "Live dashboard + weekly analysis",
+        "Paid advertising campaigns",
+        "Dedicated account manager & priority support",
       ],
-      ctaText: "Book Agency Call",
+      ctaText: "Get Custom Plan",
     },
   ];
 
@@ -123,17 +122,21 @@ export default function Pricing() {
                     ? p.monthlyPrice
                     : p.quarterlyPrice}
                 </span>
-                <span className={styles.period}>/ month</span>
+                <span className={styles.period}>
+                  {p.monthlyPrice === "Custom" ? "pricing" : "/ month"}
+                </span>
               </div>
 
-              <Link
-                href="#contact"
+              <a
+                href={getWhatsAppUrl(`Hi, I want to get started with the ${p.name} (${billingCycle}).`)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={p.popular ? "btn-primary" : "btn-secondary"}
                 style={{ width: "100%", marginBottom: "28px" }}
               >
                 <span>{p.ctaText}</span>
                 <ArrowRight size={16} />
-              </Link>
+              </a>
 
               <div className={styles.featuresList}>
                 <span className={styles.featuresTitle}>WHAT'S INCLUDED:</span>

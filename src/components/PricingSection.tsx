@@ -1,8 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function PricingSection() {
+  const [activeTab, setActiveTab] = useState<"monthly" | "yearly">("monthly");
+
   return (
     <section data-scroll="load" className="section-spacing">
       <div className="container-medium">
@@ -22,31 +25,43 @@ export default function PricingSection() {
             </div>
           </div>
           <div
-            data-current="Tab 1"
+            data-current={activeTab === "monthly" ? "Tab 1" : "Tab 2"}
             data-easing="ease"
             data-duration-in="0"
             data-duration-out="0"
             className="pricing-tab w-tabs"
           >
-            <div scroll-item="show" className="pricing-toggle w-tab-menu">
-              <a
+            <div scroll-item="show" className="pricing-toggle w-tab-menu" role="tablist">
+              <button
+                type="button"
                 data-w-tab="Tab 1"
-                className="toggle w-inline-block w-tab-link w--current"
+                className={`toggle w-inline-block w-tab-link ${activeTab === "monthly" ? "w--current" : ""}`}
+                onClick={() => setActiveTab("monthly")}
+                style={{ cursor: "pointer", background: "none", border: "none", font: "inherit" }}
               >
                 <div className="toggle-text">Monthly</div>
-              </a>
-              <a
+              </button>
+              <button
+                type="button"
                 data-w-tab="Tab 2"
-                className="toggle w-inline-block w-tab-link"
+                className={`toggle w-inline-block w-tab-link ${activeTab === "yearly" ? "w--current" : ""}`}
+                onClick={() => setActiveTab("yearly")}
+                style={{ cursor: "pointer", background: "none", border: "none", font: "inherit" }}
               >
                 <div className="toggle-text">Yearly</div>
                 <div className="toggle-badge">20% off</div>
-              </a>
+              </button>
             </div>
             <div scroll-item="show" className="w-tab-content">
               <div
                 data-w-tab="Tab 1"
-                className="pricing-tab-pane w-tab-pane w--tab-active"
+                className={`pricing-tab-pane w-tab-pane ${activeTab === "monthly" ? "w--tab-active" : ""}`}
+                style={{
+                  display: activeTab === "monthly" ? "block" : "none",
+                  opacity: activeTab === "monthly" ? 1 : 0,
+                  transform: activeTab === "monthly" ? "translateY(0)" : "translateY(10px)",
+                  transition: "opacity 0.35s ease, transform 0.35s ease",
+                }}
               >
                 <div className="w-layout-grid grid-pricing-item">
                   <div className="pricing-card bg-gray-4">
@@ -56,11 +71,11 @@ export default function PricingSection() {
                     <div className="pricing-card-bottom bg-white">
                       <div className="pricing-card-info">
                         <p className="pricing-pre-title">
-                          For brands just getting into UGC
+                          For brands just getting reach
                         </p>
                         <div className="pricing-amount">
                           <h4 className="heading-h3 no-margin-bottom">
-                            $1,999
+                            ₹9,999
                           </h4>
                           <div className="pricing-amount-item">
                             <div className="pricing-amount-text">/month</div>
@@ -78,7 +93,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              Content strategy for 1 platform
+                              Manage 1 social media platform
                             </div>
                           </div>
                           <div
@@ -92,7 +107,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              6–8 UGC videos per month
+                              15 AI viral reels/shorts per month
                             </div>
                           </div>
                           <div
@@ -106,7 +121,21 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              2 matched creator profiles
+                              15 social creative posts per month
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="lg"
+                            className="list-item w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                            />
+                            <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
+                              Viral research & trend-based creation
                             </div>
                           </div>
                           <div
@@ -134,7 +163,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              2 revision rounds per video
+                              Engagement & reach-focused growth
                             </div>
                           </div>
                         </div>
@@ -142,7 +171,9 @@ export default function PricingSection() {
                       <a
                         button="hover"
                         data-wf--button-primary--variant="base"
-                        href="/contact"
+                        href={getWhatsAppUrl("Hi, I want to get started with the Starter Plan (Monthly).")}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="button-primary w-inline-block"
                       >
                         <div className="button-primary-title">
@@ -184,7 +215,7 @@ export default function PricingSection() {
                         </p>
                         <div className="pricing-amount">
                           <h4 className="heading-h3 no-margin-bottom">
-                            $3,999
+                            ₹25,999
                           </h4>
                           <div className="pricing-amount-item">
                             <div className="pricing-amount-text dark">
@@ -204,7 +235,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
                             />
                             <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
-                              Strategy across 2 platforms
+                              Manage across 3 platforms
                             </div>
                           </div>
                           <div
@@ -218,7 +249,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
                             />
                             <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
-                              14–18 UGC videos per month
+                              30 AI viral reels/shorts per month
                             </div>
                           </div>
                           <div
@@ -232,7 +263,35 @@ export default function PricingSection() {
                               className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
                             />
                             <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
-                              5+ performance-matched
+                              30 social creative posts per month
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="dark"
+                            className="list-item w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
+                            />
+                            <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
+                              Daily posting & active engagement
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="dark"
+                            className="list-item w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
+                            />
+                            <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
+                              Influencer marketing & collaboration
                             </div>
                           </div>
                           <div
@@ -260,7 +319,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
                             />
                             <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
-                              Hook testing included
+                              Outreach & right audience growth
                             </div>
                           </div>
                         </div>
@@ -268,7 +327,9 @@ export default function PricingSection() {
                       <a
                         button="hover"
                         data-wf--button-primary--variant="base"
-                        href="/contact"
+                        href={getWhatsAppUrl("Hi, I want to get started with the Growth Plan (Monthly).")}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="button-primary w-inline-block"
                       >
                         <div className="button-primary-title">
@@ -285,20 +346,22 @@ export default function PricingSection() {
                     <div className="pricing-card-top">
                       <div className="pricing-overlay"></div>
                       <h3 className="pricing-card-title text-white">
-                        Agency plan
+                        Custom Plan
                       </h3>
                     </div>
                     <div className="pricing-card-bottom bg-white">
                       <div className="pricing-card-info">
                         <p className="pricing-pre-title">
                           Full-service for high-growth brands
+
+
                         </p>
                         <div className="pricing-amount">
                           <h4 className="heading-h3 no-margin-bottom">
-                            $6,999
+                            Custom
                           </h4>
                           <div className="pricing-amount-item">
-                            <div className="pricing-amount-text">/month</div>
+                            <div className="pricing-amount-text">pricing</div>
                           </div>
                         </div>
                         <div className="pricing-list">
@@ -313,7 +376,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              Strategy across 3+ platforms
+                              Manage multiple platforms & accounts
                             </div>
                           </div>
                           <div
@@ -327,7 +390,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              25–30 UGC videos per month
+                              Customise daily number of posts
                             </div>
                           </div>
                           <div
@@ -341,7 +404,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              10+ creators + dedicated lead
+                              UGC videos per month
                             </div>
                           </div>
                           <div
@@ -355,7 +418,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              Live dashboard + weekly calls
+                              Creator & influencer marketing / collaboration
                             </div>
                           </div>
                           <div
@@ -369,7 +432,35 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              Paid ad creative included
+                              Live dashboard + weekly analysis
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="lg"
+                            className="list-item w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                            />
+                            <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
+                              Paid advertising campaigns
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="lg"
+                            className="list-item w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                            />
+                            <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
+                              Dedicated account manager & priority support
                             </div>
                           </div>
                         </div>
@@ -377,19 +468,30 @@ export default function PricingSection() {
                       <a
                         button="hover"
                         data-wf--button-primary--variant="base"
-                        href="/contact"
+                        href={getWhatsAppUrl("Hi, I want to enquire about the Custom / Scale Plan (Monthly).")}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="button-primary w-inline-block"
                       >
                         <div className="button-primary-title">
-                          <div text-1="move">Unlock full service</div>
-                          <div text-2="move">Unlock full service</div>
+                          <div text-1="move">Get custom plan</div>
+                          <div text-2="move">Get custom plan</div>
                         </div>
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div data-w-tab="Tab 2" className="pricing-tab-pane w-tab-pane">
+              <div
+                data-w-tab="Tab 2"
+                className={`pricing-tab-pane w-tab-pane ${activeTab === "yearly" ? "w--tab-active" : ""}`}
+                style={{
+                  display: activeTab === "yearly" ? "block" : "none",
+                  opacity: activeTab === "yearly" ? 1 : 0,
+                  transform: activeTab === "yearly" ? "translateY(0)" : "translateY(10px)",
+                  transition: "opacity 0.35s ease, transform 0.35s ease",
+                }}
+              >
                 <div className="w-layout-grid grid-pricing-item">
                   <div className="pricing-card bg-gray-4">
                     <div className="pricing-card-top">
@@ -398,11 +500,11 @@ export default function PricingSection() {
                     <div className="pricing-card-bottom bg-white">
                       <div className="pricing-card-info">
                         <p className="pricing-pre-title">
-                          For brands just getting into UGC
+                          Manage one social media platform
                         </p>
                         <div className="pricing-amount">
                           <h4 className="heading-h3 no-margin-bottom">
-                            $1,599
+                            ₹7,999
                           </h4>
                           <div className="pricing-amount-item">
                             <div className="pricing-amount-text">/month</div>
@@ -420,7 +522,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              Content strategy for 1 platform
+                              Manage 1 social media platform
                             </div>
                           </div>
                           <div
@@ -434,7 +536,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              6–8 UGC videos per month
+                              15 AI viral reels/shorts per month
                             </div>
                           </div>
                           <div
@@ -448,7 +550,21 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              2 matched creator profiles
+                              15 social creative posts per month
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="lg"
+                            className="list-item w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                            />
+                            <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
+                              Viral research & trend-based creation
                             </div>
                           </div>
                           <div
@@ -476,13 +592,29 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              2 revision rounds per video
+                              Engagement & reach-focused growth
                             </div>
                           </div>
                         </div>
                       </div>
-                      <a href="#" className="button-primary w-button">
-                        Get started
+                      <a
+                        button="hover"
+                        data-wf--button-primary--variant="base"
+                        href={getWhatsAppUrl("Hi, I want to get started with the Starter Plan (Yearly).")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button-primary w-inline-block"
+                      >
+                        <div className="button-primary-title">
+                          <div text-1="move">
+                            Get started
+                            <br />
+                          </div>
+                          <div text-2="move">
+                            Get started
+                            <br />
+                          </div>
+                        </div>
                       </a>
                     </div>
                   </div>
@@ -508,11 +640,11 @@ export default function PricingSection() {
                     <div className="pricing-card-bottom bg-primary-6">
                       <div className="pricing-card-info">
                         <p className="pricing-pre-title dark">
-                          For brands ready to scale fast
+                          Manage across 3 platforms
                         </p>
                         <div className="pricing-amount">
                           <h4 className="heading-h3 no-margin-bottom">
-                            $3,199
+                            ₹20,799
                           </h4>
                           <div className="pricing-amount-item">
                             <div className="pricing-amount-text dark">
@@ -532,7 +664,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
                             />
                             <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
-                              Strategy across 2 platforms
+                              Manage across 3 platforms
                             </div>
                           </div>
                           <div
@@ -546,7 +678,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
                             />
                             <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
-                              14–18 UGC videos per month
+                              30 AI viral reels/shorts per month
                             </div>
                           </div>
                           <div
@@ -560,7 +692,35 @@ export default function PricingSection() {
                               className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
                             />
                             <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
-                              5+ performance-matched
+                              30 social creative posts per month
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="dark"
+                            className="list-item w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
+                            />
+                            <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
+                              Daily posting & active engagement
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="dark"
+                            className="list-item w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
+                            />
+                            <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
+                              Influencer marketing & collaboration
                             </div>
                           </div>
                           <div
@@ -588,13 +748,23 @@ export default function PricingSection() {
                               className="list-icon w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9"
                             />
                             <div className="list-title w-variant-76b59f53-6baa-3c6e-acce-7a221e1c3ea9">
-                              Hook testing included
+                              Outreach & right audience growth
                             </div>
                           </div>
                         </div>
                       </div>
-                      <a href="#" className="button-primary w-button">
-                        Get growth plan
+                      <a
+                        button="hover"
+                        data-wf--button-primary--variant="base"
+                        href={getWhatsAppUrl("Hi, I want to get started with the Growth Plan (Yearly).")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button-primary w-inline-block"
+                      >
+                        <div className="button-primary-title">
+                          <div text-1="move">Get growth plan</div>
+                          <div text-2="move">Get growth plan</div>
+                        </div>
                       </a>
                     </div>
                   </div>
@@ -602,20 +772,20 @@ export default function PricingSection() {
                     <div className="pricing-card-top">
                       <div className="pricing-overlay"></div>
                       <h3 className="pricing-card-title text-white">
-                        Agency plan
+                        Custom Plan
                       </h3>
                     </div>
                     <div className="pricing-card-bottom bg-white">
                       <div className="pricing-card-info">
                         <p className="pricing-pre-title">
-                          Full-service for high-growth brands
+                          Manage multiple platforms & accounts
                         </p>
                         <div className="pricing-amount">
                           <h4 className="heading-h3 no-margin-bottom">
-                            $5,599
+                            Custom
                           </h4>
                           <div className="pricing-amount-item">
-                            <div className="pricing-amount-text">/month</div>
+                            <div className="pricing-amount-text">pricing</div>
                           </div>
                         </div>
                         <div className="pricing-list">
@@ -630,7 +800,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              Strategy across 3+ platforms
+                              Manage multiple platforms & accounts
                             </div>
                           </div>
                           <div
@@ -644,7 +814,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              25–30 UGC videos per month
+                              Customise daily number of posts
                             </div>
                           </div>
                           <div
@@ -658,7 +828,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              10+ creators + dedicated lead
+                              UGC videos per month
                             </div>
                           </div>
                           <div
@@ -672,7 +842,7 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              Live dashboard + weekly calls
+                              Creator & influencer marketing / collaboration
                             </div>
                           </div>
                           <div
@@ -686,13 +856,51 @@ export default function PricingSection() {
                               className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
                             />
                             <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
-                              Paid ad creative included
+                              Live dashboard + weekly analysis
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="lg"
+                            className="list-item w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                            />
+                            <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
+                              Paid advertising campaigns
+                            </div>
+                          </div>
+                          <div
+                            data-wf--list-item--variant="lg"
+                            className="list-item w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                          >
+                            <img
+                              loading="lazy"
+                              src="https://cdn.prod.website-files.com/6a018c163190c0cf03857405/6a06d20a43bff9bfc73362e2_arrow.svg"
+                              alt="Correct Icon"
+                              className="list-icon w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e"
+                            />
+                            <div className="list-title w-variant-535fe306-e75c-77a4-7fe6-fe57d45fd01e">
+                              Dedicated account manager & priority support
                             </div>
                           </div>
                         </div>
                       </div>
-                      <a href="#" className="button-primary w-button">
-                        Unlock full service
+                      <a
+                        button="hover"
+                        data-wf--button-primary--variant="base"
+                        href={getWhatsAppUrl("Hi, I want to enquire about the Custom / Scale Plan (Yearly).")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button-primary w-inline-block"
+                      >
+                        <div className="button-primary-title">
+                          <div text-1="move">Get custom plan</div>
+                          <div text-2="move">Get custom plan</div>
+                        </div>
                       </a>
                     </div>
                   </div>

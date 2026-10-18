@@ -3,9 +3,22 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
+import { getWhatsAppUrl, WHATSAPP_PHONE_DISPLAY } from "@/lib/whatsapp";
 
 export default function ContactPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [platform, setPlatform] = useState("Instagram");
+  const [budget, setBudget] = useState("");
   const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const message = `Hi Digixet, I would like to make an enquiry!\n\n• Name: ${name || "Not provided"}\n• Email: ${email || "Not provided"}\n• Platform: ${platform || "Not selected"}\n• Budget Range: ${budget || "Not selected"}`;
+    const url = getWhatsAppUrl(message);
+    window.open(url, "_blank");
+    setSubmitted(true);
+  };
 
   return (
     <main className="main">
@@ -301,16 +314,38 @@ export default function ContactPage() {
                 <h2 className="contact-right-title">
                   Share your details with us.
                 </h2>
+                <div style={{ marginTop: "12px", marginBottom: "20px" }}>
+                  <a
+                    href={getWhatsAppUrl("Hi, I want to enquire and book a strategy call directly.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      background: "#25D366",
+                      color: "#fff",
+                      padding: "10px 18px",
+                      borderRadius: "9999px",
+                      fontWeight: 600,
+                      fontSize: "14px",
+                      textDecoration: "none",
+                      boxShadow: "0 4px 14px rgba(37,211,102,0.35)",
+                    }}
+                  >
+                    <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor">
+                      <path d="M16 2a13.9 13.9 0 0 0-12 20.9L2 30l7.3-1.9A13.9 13.9 0 1 0 16 2zm0 25.4a11.5 11.5 0 0 1-5.9-1.6l-.4-.3-4.3 1.1 1.2-4.2-.3-.5A11.5 11.5 0 1 1 16 27.4zm6.3-8.6c-.3-.2-2-.9-2.3-1s-.6-.2-.8.2-.9 1-1.1 1.2-.4.3-.7.1a9.2 9.2 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.9-2.3c-.2-.3 0-.5.1-.7s.3-.4.5-.6.2-.3.3-.5.1-.4 0-.5-.8-1.9-1.1-2.6-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 .5 4.3 4.3 0 0 0-1.3 3.2 7.5 7.5 0 0 0 1.6 4 17.2 17.2 0 0 0 6.6 5.8c.9.4 1.6.6 2.2.8a5.3 5.3 0 0 0 2.4.1 3.9 3.9 0 0 0 2.6-1.8 3.2 3.2 0 0 0 .2-1.8c-.2-.2-.5-.3-.8-.5z" />
+                    </svg>
+                    <span>Instant WhatsApp: {WHATSAPP_PHONE_DISPLAY}</span>
+                  </a>
+                </div>
               </div>
               <div className="contact-form w-form">
                 <form
                   id="wf-form-Contact-Form"
                   name="wf-form-Contact-Form"
-                  data-name="Contact Form"
-                  method="get"
+                  onSubmit={handleSubmit}
                   className="contact-inner-form"
-                  data-wf-page-id="6a0be426e4015393185abfed"
-                  data-wf-element-id="6e139727-7a5b-17fc-2864-deee9e69ac01"
                 >
                   <div className="label">
                     <label htmlFor="name" className="field-title">
@@ -320,10 +355,12 @@ export default function ContactPage() {
                       className="form-input contact-input w-input"
                       maxLength={256}
                       name="name"
-                      data-name="Name"
                       placeholder="Enter your full name"
                       type="text"
                       id="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
                     />
                   </div>
                   <div className="label">
@@ -334,10 +371,11 @@ export default function ContactPage() {
                       className="form-input contact-input w-input"
                       maxLength={256}
                       name="Email"
-                      data-name="Email"
                       placeholder="hello@yourbrand.com"
                       type="email"
                       id="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       required
                     />
                   </div>
@@ -346,111 +384,45 @@ export default function ContactPage() {
                       Which platforms are you active on?
                     </label>
                     <div className="radio-list-inner">
-                      <label className="radio-button-field radio-item w-radio">
-                        <div className="w-form-formradioinput w-form-formradioinput--inputType-custom contact-radio-button w-radio-input"></div>
-                        <input
-                          id="Instagram"
-                          type="radio"
-                          name="Platform"
-                          data-name="Platform"
-                          style={{
-                            opacity: "0",
-                            position: "absolute",
-                            zIndex: "-1",
-                          }}
-                          value="Instagram"
-                        />
-                        <span
-                          className="radio-button-label contact-radio-title w-form-label"
-                          htmlFor="Instagram"
+                      {[
+                        { id: "Instagram", label: "Instagram" },
+                        { id: "YouTube", label: "YouTube" },
+                        { id: "TikTok", label: "TikTok" },
+                        { id: "Facebook", label: "Facebook" },
+                        { id: "Other", label: "Other" },
+                      ].map((item) => (
+                        <label
+                          key={item.id}
+                          className="radio-button-field radio-item w-radio"
+                          style={{ cursor: "pointer" }}
+                          onClick={() => setPlatform(item.label)}
                         >
-                          Instagram
-                        </span>
-                      </label>
-                      <label className="radio-button-field radio-item w-radio">
-                        <div className="w-form-formradioinput w-form-formradioinput--inputType-custom contact-radio-button w-radio-input"></div>
-                        <input
-                          id="YouTube"
-                          type="radio"
-                          name="Platform"
-                          data-name="Platform"
-                          style={{
-                            opacity: "0",
-                            position: "absolute",
-                            zIndex: "-1",
-                          }}
-                          value="YouTube"
-                        />
-                        <span
-                          className="radio-button-label contact-radio-title w-form-label"
-                          htmlFor="YouTube"
-                        >
-                          YouTube
-                        </span>
-                      </label>
-                      <label className="radio-button-field radio-item w-radio">
-                        <div className="w-form-formradioinput w-form-formradioinput--inputType-custom contact-radio-button w-radio-input"></div>
-                        <input
-                          id="TikTok"
-                          type="radio"
-                          name="Platform"
-                          data-name="Platform"
-                          style={{
-                            opacity: "0",
-                            position: "absolute",
-                            zIndex: "-1",
-                          }}
-                          value="TikTok"
-                        />
-                        <span
-                          className="radio-button-label contact-radio-title w-form-label"
-                          htmlFor="TikTok"
-                        >
-                          TikTok
-                        </span>
-                      </label>
-                      <label className="radio-button-field radio-item w-radio">
-                        <div className="w-form-formradioinput w-form-formradioinput--inputType-custom contact-radio-button w-radio-input"></div>
-                        <input
-                          id="Facebook"
-                          type="radio"
-                          name="Platform"
-                          data-name="Platform"
-                          style={{
-                            opacity: "0",
-                            position: "absolute",
-                            zIndex: "-1",
-                          }}
-                          value="Facebook"
-                        />
-                        <span
-                          className="radio-button-label contact-radio-title w-form-label"
-                          htmlFor="Facebook"
-                        >
-                          Facebook
-                        </span>
-                      </label>
-                      <label className="radio-button-field radio-item w-radio">
-                        <div className="w-form-formradioinput w-form-formradioinput--inputType-custom contact-radio-button w-radio-input"></div>
-                        <input
-                          id="Other"
-                          type="radio"
-                          name="Platform"
-                          data-name="Platform"
-                          style={{
-                            opacity: "0",
-                            position: "absolute",
-                            zIndex: "-1",
-                          }}
-                          value="Other"
-                        />
-                        <span
-                          className="radio-button-label contact-radio-title w-form-label"
-                          htmlFor="Other"
-                        >
-                          Other
-                        </span>
-                      </label>
+                          <div
+                            className={`w-form-formradioinput w-form-formradioinput--inputType-custom contact-radio-button w-radio-input ${
+                              platform === item.label ? "w--redirected-checked" : ""
+                            }`}
+                          ></div>
+                          <input
+                            id={item.id}
+                            type="radio"
+                            name="Platform"
+                            checked={platform === item.label}
+                            onChange={() => setPlatform(item.label)}
+                            style={{
+                              opacity: "0",
+                              position: "absolute",
+                              zIndex: "-1",
+                            }}
+                            value={item.label}
+                          />
+                          <span
+                            className="radio-button-label contact-radio-title w-form-label"
+                            htmlFor={item.id}
+                          >
+                            {item.label}
+                          </span>
+                        </label>
+                      ))}
                     </div>
                   </div>
                   <div className="label">
@@ -460,8 +432,9 @@ export default function ContactPage() {
                     <select
                       id="Location"
                       name="Location"
-                      data-name="Location"
                       className="form-select contact-select w-select"
+                      value={budget}
+                      onChange={(e) => setBudget(e.target.value)}
                     >
                       <option value="">Select budget range</option>
                       <option value="Under $5,000">Under $5,000</option>
@@ -469,30 +442,40 @@ export default function ContactPage() {
                       <option value="$10,000 - $25,000">
                         $10,000 - $25,000
                       </option>
-                      <option value="$25,000">$25,000</option>
+                      <option value="$25,000">$25,000+</option>
                     </select>
                   </div>
                   <div className="left-item">
-                    <input
+                    <button
                       type="submit"
-                      data-wait="Please wait..."
                       className="button-primary contact-button w-button"
-                      value="Send message"
-                    />
+                      style={{ cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px" }}
+                    >
+                      <span>Send enquiry via WhatsApp</span>
+                      <svg viewBox="0 0 32 32" width="16" height="16" fill="currentColor">
+                        <path d="M16 2a13.9 13.9 0 0 0-12 20.9L2 30l7.3-1.9A13.9 13.9 0 1 0 16 2zm0 25.4a11.5 11.5 0 0 1-5.9-1.6l-.4-.3-4.3 1.1 1.2-4.2-.3-.5A11.5 11.5 0 1 1 16 27.4zm6.3-8.6c-.3-.2-2-.9-2.3-1s-.6-.2-.8.2-.9 1-1.1 1.2-.4.3-.7.1a9.2 9.2 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.9-2.3c-.2-.3 0-.5.1-.7s.3-.4.5-.6.2-.3.3-.5.1-.4 0-.5-.8-1.9-1.1-2.6-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 .5 4.3 4.3 0 0 0-1.3 3.2 7.5 7.5 0 0 0 1.6 4 17.2 17.2 0 0 0 6.6 5.8c.9.4 1.6.6 2.2.8a5.3 5.3 0 0 0 2.4.1 3.9 3.9 0 0 0 2.6-1.8 3.2 3.2 0 0 0 .2-1.8c-.2-.2-.5-.3-.8-.5z" />
+                      </svg>
+                    </button>
                   </div>
                 </form>
-                <div className="success-message w-form-done">
-                  <div>
-                    Your form has been submitted successfully. Thank you!
+                {submitted && (
+                  <div
+                    className="success-message w-form-done"
+                    style={{ display: "block", marginTop: "16px", background: "#10b98120", border: "1px solid #10b981", borderRadius: "12px", padding: "16px" }}
+                  >
+                    <div>
+                      Redirecting to WhatsApp (+91 77719 83690)... If WhatsApp didn't open automatically,{" "}
+                      <a
+                        href={getWhatsAppUrl(`Hi Digixet, I would like to make an enquiry!\n\n• Name: ${name}\n• Email: ${email}\n• Platform: ${platform}\n• Budget Range: ${budget}`)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#25D366", fontWeight: "bold", textDecoration: "underline" }}
+                      >
+                        click here to chat on WhatsApp
+                      </a>.
+                    </div>
                   </div>
-                </div>
-                <div className="error-message w-form-fail">
-                  <div>
-                    Please double-check your information and try again. If the
-                    issue continues, you can also email us directly at
-                    support@yourdomain.com
-                  </div>
-                </div>
+                )}
               </div>
             </div>
           </div>

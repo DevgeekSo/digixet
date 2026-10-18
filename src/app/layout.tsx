@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import ScrollAnimationProvider from "@/components/ScrollAnimationProvider";
+import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
 export const metadata: Metadata = {
   title: "digixet - Creative UGC & Social Media Agency",
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body>
         <ScrollAnimationProvider />
         {children}
+        <WhatsAppFloatingButton />
 
         {/* Load Google WebFont Boldonse */}
         <Script

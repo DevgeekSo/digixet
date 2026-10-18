@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 interface ServiceData {
   id: string;
@@ -315,7 +316,9 @@ export default function AllServicesCardsSection() {
                             <a
                               button="hover"
                               data-wf--button-arrow--variant="base-button"
-                              href={`/contact?service=${encodeURIComponent(service.title)}`}
+                              href={getWhatsAppUrl(`Hi, I want to enquire about ${service.title}.`)}
+                              target="_blank"
+                              rel="noopener noreferrer"
                               className="button-arrow w-inline-block"
                             >
                               <div className="button-icon-round">

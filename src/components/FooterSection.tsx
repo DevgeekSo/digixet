@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { getWhatsAppUrl, WHATSAPP_PHONE_DISPLAY } from "@/lib/whatsapp";
 
 export default function FooterSection() {
   const currentYear = new Date().getFullYear();
@@ -180,15 +181,17 @@ export default function FooterSection() {
                   id="w-node-_8f9179b9-112b-3db0-42d5-2530d9b38d34-6cfe1801"
                   className="footer-cta"
                 >
-                  <Link
-                    href="/contact"
+                  <a
+                    href={getWhatsAppUrl("Hi, I want to book a call with your team.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="button-primary w-variant-b940acd3-b80a-7320-211f-5a9c6f4def9c w-inline-block"
                   >
                     <div className="button-primary-title">
                       <div text-1="move">Book a call</div>
                       <div text-2="move">Book a call</div>
                     </div>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -198,8 +201,13 @@ export default function FooterSection() {
             <div scroll-item="show" className="footer-contact-info">
               <h3 className="footer-title">Contact Info</h3>
               <div className="footer-contact-list">
-                <a href="tel:+1(202)5550147" className="footer-contact-link">
-                  +1 (202) 555 0147
+                <a
+                  href={getWhatsAppUrl("Hi, I'm reaching out from your website.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-contact-link"
+                >
+                  {WHATSAPP_PHONE_DISPLAY} (WhatsApp)
                 </a>
                 <a
                   href="mailto:hello@digixet.com"
